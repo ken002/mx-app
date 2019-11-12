@@ -17,6 +17,7 @@
 			this.selectProductsOnline();
 		},
 		methods: {
+			//广告位
 			async selectHotProducts(){
 				const res = await this.$util.request({
 					requestUrl: 'api/products',
@@ -30,6 +31,7 @@
 				});
 				console.log('广告位：', res);
 			},
+			//上架产品列表
 			async selectProductsOnline(){
 				const res = await this.$util.request({
 					requestUrl: 'api/products',
