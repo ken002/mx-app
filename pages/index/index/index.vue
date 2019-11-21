@@ -2,24 +2,34 @@
 	<view>
 		<swiper class="card-swiper" :class="dotStyle?'square-dot':'round-dot'" :indicator-dots="true" :circular="true"
 		 :autoplay="true" interval="5000" duration="500" @change="cardSwiper" indicator-color="#8799a3"
-		 indicator-active-color="#0081ff">
+		 indicator-active-color="#39b54a">
 			<swiper-item v-for="(item,index) in swiperArr" :key="index" :class="cardCur==index?'cur':''">
 				<view class="swiper-item">
 					<image :src="item.image" mode="aspectFill"></image>
 				</view>
 			</swiper-item>
 		</swiper>
+		<view class="waterfall-flow-view">
+			<view class="title">- 当季流行 -</view>
+			<waterfall-flow :list="list" :loading="loading" @click="choose"></waterfall-flow>
+		</view>
 	</view>
 </template>
 
 <script>
+import WaterfallFlow from '../../../components/common/nairenk-waterfall-flow/nairenk-waterfall-flow.vue';
 export default {
+	 components: {
+	            WaterfallFlow
+	        },
 	data() {
 		return {
 			page: 1,
 			swiperArr:[],
 			dotStyle:false,
 			cardCur:0,
+			list:[],
+			loading:false,
 		};
 	},
 	onLoad() {
@@ -27,7 +37,14 @@ export default {
 
 		this.selectProductsOnline();
 	},
+	onReachBottom(){
+		this.page++;
+		this.selectProductsOnline();
+	},
 	methods: {
+		choose(){
+			
+		},
 		cardSwiper(){
 			
 		},
@@ -36,8 +53,8 @@ export default {
 			const res = await this.$util.request({
 				requestUrl: 'api/products',
 				data: {
-					limit: 10,
-					page: this.page,
+					limit: 5,
+					page: 1,
 					name: null,
 					hot: 1,
 					online: null
@@ -60,6 +77,8 @@ export default {
 				}
 			});
 			console.log('所有上架商品：', res);
+			
+			this.list=this.list.concat(res.data.data);
 		}
 	}
 };
@@ -70,4 +89,13 @@ export default {
 		width: 100%;
 		height: 100%;
 	}
+	.waterfall-flow-view{
+		padding-bottom: 20px;
+		.title{
+			text-align: center;
+			margin: 20px 0;
+			font-size: 16px;
+		}
+	}
+	
 </style>
