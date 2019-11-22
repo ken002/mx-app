@@ -16,4 +16,8 @@
 	/*每个页面公共css */
 	@import "colorui/main.css";
 	@import "colorui/icon.css";
+	
+	page{
+		height: 100%;
+	}
 </style>

@@ -15,7 +15,7 @@
 						</view>
 					</view>
 					<view class="cu-list menu-avatar">
-						<view v-for="(item, index) in list2" :key="index" class="cu-item">{{item.name}}</view>
+						<view v-for="(item, index) in list2" :key="index" class="cu-item">{{ item.name }}</view>
 					</view>
 				</view>
 			</scroll-view>
@@ -35,15 +35,24 @@ export default {
 		};
 	},
 	onLoad(){
-		this.selectCategory();
+		(async ()=>{
+			await this.selectCategory();
+			this.selectProductsByCategory(this.list[0].id);
+		})();
 	},
 	methods: {
+		async selectProductsByCategory(id) {
+			const res = await this.$util.request({
+				requestUrl: 'api/productsByCategory/'+id,
+			});
+			console.log('某类下的商品：', res);
+		},
 		async selectCategory() {
 			const res = await this.$util.request({
 				requestUrl:'api/category'
 			});
 			console.log('查询所有类别：',res);
-			
+
 			if(res!==undefined){
 				this.list = res.data.data;
 			}
@@ -52,6 +61,8 @@ export default {
 			this.tabCur = e.currentTarget.dataset.id;
 			this.mainCur = e.currentTarget.dataset.id;
 			this.verticalNavTop = (e.currentTarget.dataset.id - 1) * 50;
+			
+			this.selectProductsByCategory(this.list[this.tabCur].id);
 		},
 		VerticalMain(e) {
 			let that = this;

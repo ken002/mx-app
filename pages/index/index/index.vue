@@ -9,9 +9,28 @@
 				</view>
 			</swiper-item>
 		</swiper>
+		
 		<view class="waterfall-flow-view">
-			<view class="title">- 当季流行 -</view>
-			<waterfall-flow :list="list" :loading="loading" @click="choose"></waterfall-flow>
+			<view class="cu-bar bg-white solid-bottom">
+				<view class="action">
+					<text class="cuIcon-titles text-orange"></text> 本店热款
+				</view>
+				<view class="action">
+					<text>更多</text>
+				</view>
+			</view>
+			<waterfall-flow :list="list2" :loading="false" @click="choose2"></waterfall-flow>
+		</view>
+		<view class="waterfall-flow-view">
+			<view class="cu-bar bg-white solid-bottom">
+				<view class="action">
+					<text class="cuIcon-titles text-orange"></text> 当季流行
+				</view>
+				<view class="action">
+					<text>更多</text>
+				</view>
+			</view>
+			<waterfall-flow :list="list" :loading="false" @click="choose"></waterfall-flow>
 		</view>
 	</view>
 </template>
@@ -25,60 +44,70 @@ export default {
 	data() {
 		return {
 			page: 1,
-			swiperArr:[],
+			swiperArr:[{
+				image:'/static/avatar.jpg'
+			},{
+				image:'/static/avatar2.jpg'
+			}],
 			dotStyle:false,
 			cardCur:0,
 			list:[],
-			loading:false,
+			list2:[]
 		};
 	},
 	onLoad() {
-		this.selectHotProducts();
-
-		this.selectProductsOnline();
-	},
-	onReachBottom(){
-		this.page++;
-		this.selectProductsOnline();
+		this.selectAd();
+		this.selectSelfProducts();
+		
+		setTimeout(()=>{
+			this.selectCurrPopularProducts();
+		},1000)
 	},
 	methods: {
 		choose(){
+			
+		},
+		choose2(){
 			
 		},
 		cardSwiper(){
 			
 		},
 		//广告位
-		async selectHotProducts() {
-			const res = await this.$util.request({
-				requestUrl: 'api/products',
-				data: {
-					limit: 5,
-					page: 1,
-					name: null,
-					hot: 1,
-					online: null
-				}
-			});
-			console.log('广告位：', res);
+		async selectAd() {
 			
-			this.swiperArr=res.data.data;
 		},
-		//上架产品列表
-		async selectProductsOnline() {
+		//本店
+		async selectSelfProducts(){
 			const res = await this.$util.request({
 				requestUrl: 'api/products',
 				data: {
 					limit: 10,
-					page: this.page,
+					page: 1,
 					name: null,
-					hot: null,
+					pType: 1,
 					online: 1
 				}
 			});
-			console.log('所有上架商品：', res);
+			console.log('本店：', res);
 			
-			this.list=this.list.concat(res.data.data);
+			this.list2=res.data.data;
+		},
+		//流行
+		async selectCurrPopularProducts() {
+			const res = await this.$util.request({
+				requestUrl: 'api/products',
+				data: {
+					limit: 10,
+					page: 1,
+					name: null,
+					pType: 0,
+					online: 1
+				}
+			});
+			console.log('流行：', res);
+			
+			this.list=res.data.data;
 		}
 	}
 };
@@ -90,12 +119,7 @@ export default {
 		height: 100%;
 	}
 	.waterfall-flow-view{
-		padding-bottom: 20px;
-		.title{
-			text-align: center;
-			margin: 20px 0;
-			font-size: 16px;
-		}
+		margin-bottom: 20px;
 	}
 	
 </style>
