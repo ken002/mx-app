@@ -90,8 +90,9 @@ export default {
 				}
 			});
 			console.log('本店：', res);
-			
-			this.list2=res.data.data;
+			if (res !== undefined) {
+				this.list2=res.data.data;
+			}
 		},
 		//流行
 		async selectCurrPopularProducts() {
@@ -106,8 +107,9 @@ export default {
 				}
 			});
 			console.log('流行：', res);
-			
-			this.list=res.data.data;
+			if (res !== undefined) {
+				this.list=res.data.data;
+			}
 		}
 	}
 };

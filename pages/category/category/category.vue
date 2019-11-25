@@ -37,7 +37,9 @@ export default {
 	onLoad(){
 		(async ()=>{
 			await this.selectCategory();
-			this.selectProductsByCategory(this.list[0].id);
+			if(this.list.length>0){
+				this.selectProductsByCategory(this.list[0].id);
+			}
 		})();
 	},
 	methods: {
