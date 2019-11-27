@@ -14,8 +14,14 @@
 							{{ item.name }}
 						</view>
 					</view>
-					<view class="cu-list menu-avatar">
-						<view v-for="(item, index) in list2" :key="index" class="cu-item">{{ item.name }}</view>
+					<view class="cu-card case isCard">
+						<view v-for="(item2, index2) in item.arr" :key="index2" class="cu-item shadow right-card-item">
+							<view class="image">
+								<image :src="item2.image"
+								 mode="aspectFill"></image>
+								<view class="cu-bar bg-shadeBottom"> <text class="text-cut">{{item2.name}}</text></view>
+							</view>
+						</view>
 					</view>
 				</view>
 			</scroll-view>
@@ -28,7 +34,6 @@ export default {
 	data() {
 		return {
 			list: [],
-			list2:[],
 			tabCur: 0,
 			mainCur: 0,
 			verticalNavTop: 0
@@ -38,7 +43,10 @@ export default {
 		(async ()=>{
 			await this.selectCategory();
 			if(this.list.length>0){
-				this.selectProductsByCategory(this.list[0].id);
+				for(let i of this.list){
+					await this.selectProductsByCategory(i.id);
+				}
+				console.log(this.list);
 			}
 		})();
 	},
@@ -48,6 +56,13 @@ export default {
 				requestUrl: 'api/productsByCategory/'+id,
 			});
 			console.log('某类下的商品：', res);
+			if(res!==undefined){
+				for(let i of this.list){
+					if(i.id===id){
+						i.arr=res.data.data;
+					}
+				}
+			}
 		},
 		async selectCategory() {
 			const res = await this.$util.request({
@@ -57,14 +72,15 @@ export default {
 
 			if(res!==undefined){
 				this.list = res.data.data;
+				for(let i of this.list){
+					this.$set(i, 'arr', []);
+				}
 			}
 		},
 		TabSelect(e) {
 			this.tabCur = e.currentTarget.dataset.id;
 			this.mainCur = e.currentTarget.dataset.id;
 			this.verticalNavTop = (e.currentTarget.dataset.id - 1) * 50;
-			
-			this.selectProductsByCategory(this.list[this.tabCur].id);
 		},
 		VerticalMain(e) {
 			let that = this;
@@ -137,5 +153,15 @@ export default {
 .VerticalMain {
 	background-color: #f1f1f1;
 	flex: 1;
+}
+
+.right-card-item{
+	margin: 10px;
+	.image{
+		height: 140px;
+		image{
+			height: 100%;
+		}
+	}
 }
 </style>
