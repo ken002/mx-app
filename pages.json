@@ -3,25 +3,30 @@
 		{
 			"path": "pages/index/index/index",
 			"style": {
-				"navigationBarTitleText": "首页"
+				"navigationBarTitleText": "MX美甲",
+				"enablePullDownRefresh":true
 			}
 		},
 		{
 			"path": "pages/category/category/category",
 			"style": {
-				"navigationBarTitleText": "分类"
+				"navigationBarTitleText": "类别",
+				"enablePullDownRefresh":true
 			}
 		},
 		{
 			"path": "pages/my/my/my",
 			"style": {
-				"navigationBarTitleText": "我的"
+				"navigationBarTitleText": "我"
 			}
 		}
-	],
+	    ,{
+            "path" : "pages/index/productList/productList",
+            "style" : {}
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		// "navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
@@ -40,12 +45,12 @@
 				"pagePath": "pages/category/category/category",
 				"iconPath": "static/api.png",
 				"selectedIconPath": "static/apiHL.png",
-				"text": "分类"
+				"text": "类别"
 			}, {
 				"pagePath": "pages/my/my/my",
 				"iconPath": "static/template.png",
 				"selectedIconPath": "static/templateHL.png",
-				"text": "我的"
+				"text": "我"
 			}
 		]
 	}

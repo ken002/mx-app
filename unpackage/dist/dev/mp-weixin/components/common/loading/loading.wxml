@@ -1,0 +1,1 @@
+<block wx:if="{{isShow}}"><view class="bg-white flex-sub radius shadow-lg loading data-v-28e3b730"><image class="gif-white response data-v-28e3b730" style="height:240rpx;" src="/static/loading-white.gif" mode="aspectFit"></image></view></block>

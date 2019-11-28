@@ -36,6 +36,8 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap34.json"
+  "usingComponents": {
+    "loading": "/components/common/loading/loading"
+  },
+  "sitemapLocation": "sitemap28.json"
 }

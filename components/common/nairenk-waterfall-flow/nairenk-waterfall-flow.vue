@@ -7,7 +7,7 @@
 			:data-index="index"
 			 @click="choose">
 			<view class="pic">
-				<image class="image" mode="widthFix" :src="item.image" style="width: 100%; display: block;" ></image>
+				<image @tap="preview(item.image)" class="image" mode="widthFix" :src="item.image" style="width: 100%; display: block;" ></image>
 			</view>
 			<view class="content">
 				<text>{{item.name}}</text>
@@ -60,6 +60,11 @@
 			}
 		},
 		methods: {
+			preview(image){
+				uni.previewImage({
+					urls:[image]
+				})
+			},
 			// 瀑布流定位
 			waterFall() {
 				const query = uni.createSelectorQuery().in(this);

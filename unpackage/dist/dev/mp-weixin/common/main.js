@@ -13,7 +13,10 @@ var _App = _interopRequireDefault(__webpack_require__(/*! ./App */ 9));
 var _util = _interopRequireDefault(__webpack_require__(/*! ./common/util.js */ 15));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
 _vue.default.config.productionTip = false;
 _vue.default.prototype.$util = _util.default;
-_App.default.mpType = 'app';
+_App.default.mpType = 'app';var loading = function loading() {return __webpack_require__.e(/*! import() | components/common/loading/loading */ "components/common/loading/loading").then(__webpack_require__.bind(null, /*! ./components/common/loading/loading */ 41));};
+
+
+_vue.default.component('loading', loading);
 
 var app = new _vue.default(_objectSpread({},
 _App.default));

@@ -43,5 +43,7 @@
   },
   "appname": "my-node-wx",
   "compilerVersion": "2.4.2",
-  "usingComponents": {}
+  "usingComponents": {
+    "loading": "/components/common/loading/loading"
+  }
 }

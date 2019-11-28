@@ -65,4 +65,13 @@
       -ms-flex: 1;
           flex: 1;
 }
+.right-card-item.data-v-c45d1a32 {
+  margin: 10px;
+}
+.right-card-item .image.data-v-c45d1a32 {
+    height: 140px;
+}
+.right-card-item .image image.data-v-c45d1a32 {
+      height: 100%;
+}
 

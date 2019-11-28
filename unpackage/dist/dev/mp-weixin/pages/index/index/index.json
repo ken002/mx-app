@@ -1,6 +1,4 @@
 {
   "navigationBarTitleText": "首页",
-  "usingComponents": {
-    "waterfall-flow": "/components/common/nairenk-waterfall-flow/nairenk-waterfall-flow"
-  }
+  "usingComponents": {}
 }

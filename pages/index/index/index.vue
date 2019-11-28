@@ -1,88 +1,129 @@
 <template>
-	<view>
-		<swiper class="card-swiper" :class="dotStyle?'square-dot':'round-dot'" :indicator-dots="true" :circular="true"
-		 :autoplay="true" interval="5000" duration="500" @change="cardSwiper" indicator-color="#8799a3"
-		 indicator-active-color="#39b54a">
-			<swiper-item v-for="(item,index) in swiperArr" :key="index" :class="cardCur==index?'cur':''">
-				<view class="swiper-item">
-					<image :src="item.image" mode="aspectFill"></image>
-				</view>
+	<view class="jly-body">
+		<view class="uni-swiper-msg">
+			<view class="uni-swiper-msg-icon cuIcon-notificationfill"></view>
+			<swiper autoplay="true" circular="true" interval="5000">
+				<swiper-item v-for="(item, index) in msg" :key="index">
+					<navigator>{{ item }}</navigator>
+				</swiper-item>
+			</swiper>
+		</view>
+		<swiper
+			class="card-swiper"
+			:class="dotStyle ? 'square-dot' : 'round-dot'"
+			:indicator-dots="true"
+			:circular="true"
+			:autoplay="true"
+			interval="5000"
+			duration="500"
+			@change="cardSwiper"
+			indicator-color="#8799a3"
+			indicator-active-color="#39b54a"
+		>
+			<swiper-item @tap.stop="preview(item.image)" v-for="(item, index) in swiperArr" :key="index" :class="cardCur == index ? 'cur' : ''">
+				<view class="swiper-item"><image :src="item.image" mode="aspectFill"></image></view>
 			</swiper-item>
 		</swiper>
-		
+
 		<view class="waterfall-flow-view">
 			<view class="cu-bar bg-white solid-bottom">
 				<view class="action">
-					<text class="cuIcon-titles text-orange"></text> 本店热款
+					<text class="cuIcon-titles text-orange"></text>
+					本店热款
 				</view>
-				<view class="action">
-					<text>更多</text>
+				<view class="action"><text @tap="toMore(1)">更多</text></view>
+			</view>
+			<view class="sample-show">
+				<view v-for="(item, index) in list" :key="index" class="item">
+					<view class="image-container"><image @tap="preview(item.image)" mode="aspectFill" :src="item.image"></image></view>
+					<view>
+						<text class="jly-text-overflow-two">{{ item.name }}</text>
+					</view>
 				</view>
 			</view>
-			<waterfall-flow :list="list2" :loading="false" @click="choose2"></waterfall-flow>
 		</view>
 		<view class="waterfall-flow-view">
 			<view class="cu-bar bg-white solid-bottom">
 				<view class="action">
-					<text class="cuIcon-titles text-orange"></text> 当季流行
+					<text class="cuIcon-titles text-orange"></text>
+					当季流行
 				</view>
-				<view class="action">
-					<text>更多</text>
+				<view class="action"><text @tap="toMore(2)">更多</text></view>
+			</view>
+			<view class="sample-show">
+				<view v-for="(item, index) in list2" :key="index" class="item">
+					<view class="image-container"><image @tap="preview(item.image)" mode="aspectFill" :src="item.image"></image></view>
+					<view>
+						<text class="jly-text-overflow-two">{{ item.name }}</text>
+					</view>
 				</view>
 			</view>
-			<waterfall-flow :list="list" :loading="false" @click="choose"></waterfall-flow>
 		</view>
 	</view>
 </template>
 
 <script>
-import WaterfallFlow from '../../../components/common/nairenk-waterfall-flow/nairenk-waterfall-flow.vue';
 export default {
-	 components: {
-	            WaterfallFlow
-	        },
 	data() {
 		return {
-			page: 1,
-			swiperArr:[{
-				image:'/static/avatar.jpg'
-			},{
-				image:'/static/avatar2.jpg'
-			}],
-			dotStyle:false,
-			cardCur:0,
-			list:[],
-			list2:[]
+			swiperArr: [],
+			dotStyle: false,
+			cardCur: 0,
+			list: [],
+			list2: [],
+			msg: ['免费招学徒','涵盖业务:美甲、美睫、纹眉、修眉、打耳洞、小纹身等','联系方式:15180699664']
 		};
 	},
 	onLoad() {
 		this.selectAd();
-		this.selectSelfProducts();
-		
-		setTimeout(()=>{
+		setTimeout(() => {
+			this.selectSelfProducts();
+		}, 500);
+		setTimeout(() => {
 			this.selectCurrPopularProducts();
-		},1000)
+		}, 1000);
+	},
+	onPullDownRefresh() {
+		this.selectAd();
+		setTimeout(() => {
+			this.selectSelfProducts();
+		}, 500);
+		setTimeout(() => {
+			this.selectCurrPopularProducts();
+		}, 1000);
 	},
 	methods: {
-		choose(){
-			
+		preview(image) {
+			uni.previewImage({
+				urls: [image]
+			});
 		},
-		choose2(){
-			
+		toMore(type) {
+			uni.navigateTo({
+				url: `../productList/productList?type=${type}`
+			});
 		},
-		cardSwiper(){
-			
+		cardSwiper(e) {
+			this.cardCur = e.detail.current;
 		},
 		//广告位
 		async selectAd() {
-			
+			const res = await this.$util.request({
+				requestUrl: 'api/ads'
+			});
+			console.log('广告：', res);
+			if (res !== undefined) {
+				this.swiperArr = res.data.data;
+			} else {
+				uni.stopPullDownRefresh();
+			}
 		},
 		//本店
-		async selectSelfProducts(){
+		async selectSelfProducts() {
 			const res = await this.$util.request({
 				requestUrl: 'api/products',
 				data: {
-					limit: 10,
+					limit: 6,
 					page: 1,
 					name: null,
 					pType: 1,
@@ -91,7 +132,9 @@ export default {
 			});
 			console.log('本店：', res);
 			if (res !== undefined) {
-				this.list2=res.data.data;
+				this.list = res.data.data;
+			} else {
+				uni.stopPullDownRefresh();
 			}
 		},
 		//流行
@@ -99,16 +142,17 @@ export default {
 			const res = await this.$util.request({
 				requestUrl: 'api/products',
 				data: {
-					limit: 10,
+					limit: 6,
 					page: 1,
 					name: null,
 					pType: 0,
 					online: 1
 				}
 			});
+			uni.stopPullDownRefresh();
 			console.log('流行：', res);
 			if (res !== undefined) {
-				this.list=res.data.data;
+				this.list2 = res.data.data;
 			}
 		}
 	}
@@ -116,12 +160,29 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-	.swiper-image{
-		width: 100%;
-		height: 100%;
+.uni-swiper-msg {
+	padding: 0 20rpx;
+	margin-top: 20px;
+}
+.swiper-image {
+	width: 100%;
+	height: 100%;
+}
+.waterfall-flow-view {
+	margin-bottom: 20px;
+}
+.sample-show {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	.item {
+		width: 50%;
+		padding: 10px;
+		.image-container {
+			height: 200px;
+			border-radius: 6px;
+			overflow: hidden;
+		}
 	}
-	.waterfall-flow-view{
-		margin-bottom: 20px;
-	}
-	
+}
 </style>

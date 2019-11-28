@@ -122,57 +122,67 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 16));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var WaterfallFlow = function WaterfallFlow() {return __webpack_require__.e(/*! import() | components/common/nairenk-waterfall-flow/nairenk-waterfall-flow */ "components/common/nairenk-waterfall-flow/nairenk-waterfall-flow").then(__webpack_require__.bind(null, /*! ../../../components/common/nairenk-waterfall-flow/nairenk-waterfall-flow.vue */ 41));};var _default =
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 16));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};} //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default =
 {
-  components: {
-    WaterfallFlow: WaterfallFlow },
-
   data: function data() {
     return {
-      page: 1,
-      swiperArr: [{
-        image: '/static/avatar.jpg' },
-      {
-        image: '/static/avatar2.jpg' }],
-
+      swiperArr: [],
       dotStyle: false,
       cardCur: 0,
       list: [],
@@ -181,32 +191,38 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   },
   onLoad: function onLoad() {var _this = this;
     this.selectAd();
-    this.selectSelfProducts();
-
+    setTimeout(function () {
+      _this.selectSelfProducts();
+    }, 500);
     setTimeout(function () {
       _this.selectCurrPopularProducts();
     }, 1000);
   },
   methods: {
-    choose: function choose() {
+    preview: function preview(image) {
+      uni.previewImage({
+        urls: [image] });
 
     },
-    choose2: function choose2() {
-
-    },
-    cardSwiper: function cardSwiper() {
-
+    cardSwiper: function cardSwiper(e) {
+      this.cardCur = e.detail.current;
     },
     //广告位
-    selectAd: function () {var _selectAd = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:case "end":return _context.stop();}}}, _callee, this);}));function selectAd() {return _selectAd.apply(this, arguments);}return selectAd;}(),
+    selectAd: function () {var _selectAd = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
+                  this.$util.request({
+                    requestUrl: 'api/ads' }));case 2:res = _context.sent;
 
+                console.log('广告：', res);
+                if (res !== undefined) {
+                  this.swiperArr = res.data.data;
+                }case 5:case "end":return _context.stop();}}}, _callee, this);}));function selectAd() {return _selectAd.apply(this, arguments);}return selectAd;}(),
 
     //本店
     selectSelfProducts: function () {var _selectSelfProducts = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
                   this.$util.request({
                     requestUrl: 'api/products',
                     data: {
-                      limit: 10,
+                      limit: 6,
                       page: 1,
                       name: null,
                       pType: 1,
@@ -223,7 +239,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
                   this.$util.request({
                     requestUrl: 'api/products',
                     data: {
-                      limit: 10,
+                      limit: 6,
                       page: 1,
                       name: null,
                       pType: 0,
@@ -234,6 +250,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
                 if (res !== undefined) {
                   this.list = res.data.data;
                 }case 5:case "end":return _context3.stop();}}}, _callee3, this);}));function selectCurrPopularProducts() {return _selectCurrPopularProducts.apply(this, arguments);}return selectCurrPopularProducts;}() } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 

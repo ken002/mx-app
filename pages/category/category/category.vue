@@ -15,7 +15,7 @@
 						</view>
 					</view>
 					<view class="cu-card case isCard">
-						<view v-for="(item2, index2) in item.arr" :key="index2" class="cu-item shadow right-card-item">
+						<view @tap="preview(item2.image)" v-for="(item2, index2) in item.arr" :key="index2" class="cu-item shadow right-card-item">
 							<view class="image">
 								<image :src="item2.image"
 								 mode="aspectFill"></image>
@@ -39,6 +39,17 @@ export default {
 			verticalNavTop: 0
 		};
 	},
+	onPullDownRefresh(){
+		(async ()=>{
+			await this.selectCategory();
+			if(this.list.length>0){
+				for(let i of this.list){
+					await this.selectProductsByCategory(i.id);
+				}
+				console.log(this.list);
+			}
+		})();
+	},
 	onLoad(){
 		(async ()=>{
 			await this.selectCategory();
@@ -51,10 +62,16 @@ export default {
 		})();
 	},
 	methods: {
+		preview(image){
+			uni.previewImage({
+				urls:[image]
+			})
+		},
 		async selectProductsByCategory(id) {
 			const res = await this.$util.request({
 				requestUrl: 'api/productsByCategory/'+id,
 			});
+			uni.stopPullDownRefresh();
 			console.log('某类下的商品：', res);
 			if(res!==undefined){
 				for(let i of this.list){
@@ -69,12 +86,14 @@ export default {
 				requestUrl:'api/category'
 			});
 			console.log('查询所有类别：',res);
-
+			
 			if(res!==undefined){
 				this.list = res.data.data;
 				for(let i of this.list){
 					this.$set(i, 'arr', []);
 				}
+			}else{
+				uni.stopPullDownRefresh();
 			}
 		},
 		TabSelect(e) {

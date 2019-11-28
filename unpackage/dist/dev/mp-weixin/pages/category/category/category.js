@@ -147,48 +147,69 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
     return {
       list: [],
-      list2: [],
       tabCur: 0,
       mainCur: 0,
       verticalNavTop: 0 };
 
   },
   onLoad: function onLoad() {var _this = this;
-    _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
-                _this.selectCategory());case 2:
-              if (_this.list.length > 0) {
-                _this.selectProductsByCategory(_this.list[0].id);
-              }case 3:case "end":return _context.stop();}}}, _callee, this);}))();
+    _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var _iteratorNormalCompletion, _didIteratorError, _iteratorError, _iterator, _step, i;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
+                _this.selectCategory());case 2:if (!(
+              _this.list.length > 0)) {_context.next = 30;break;}_iteratorNormalCompletion = true;_didIteratorError = false;_iteratorError = undefined;_context.prev = 6;_iterator =
+              _this.list[Symbol.iterator]();case 8:if (_iteratorNormalCompletion = (_step = _iterator.next()).done) {_context.next = 15;break;}i = _step.value;_context.next = 12;return (
+                _this.selectProductsByCategory(i.id));case 12:_iteratorNormalCompletion = true;_context.next = 8;break;case 15:_context.next = 21;break;case 17:_context.prev = 17;_context.t0 = _context["catch"](6);_didIteratorError = true;_iteratorError = _context.t0;case 21:_context.prev = 21;_context.prev = 22;if (!_iteratorNormalCompletion && _iterator.return != null) {_iterator.return();}case 24:_context.prev = 24;if (!_didIteratorError) {_context.next = 27;break;}throw _iteratorError;case 27:return _context.finish(24);case 28:return _context.finish(21);case 29:
+
+              console.log(_this.list);case 30:case "end":return _context.stop();}}}, _callee, this, [[6, 17, 21, 29], [22,, 24, 28]]);}))();
+
 
   },
   methods: {
-    selectProductsByCategory: function () {var _selectProductsByCategory = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2(id) {var res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
+    preview: function preview(image) {
+      uni.previewImage({
+        urls: [image] });
+
+    },
+    selectProductsByCategory: function () {var _selectProductsByCategory = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2(id) {var res, _iteratorNormalCompletion2, _didIteratorError2, _iteratorError2, _iterator2, _step2, i;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
                   this.$util.request({
                     requestUrl: 'api/productsByCategory/' + id }));case 2:res = _context2.sent;
 
-                console.log('某类下的商品：', res);case 4:case "end":return _context2.stop();}}}, _callee2, this);}));function selectProductsByCategory(_x) {return _selectProductsByCategory.apply(this, arguments);}return selectProductsByCategory;}(),
+                console.log('某类下的商品：', res);if (!(
+                res !== undefined)) {_context2.next = 24;break;}_iteratorNormalCompletion2 = true;_didIteratorError2 = false;_iteratorError2 = undefined;_context2.prev = 8;
+                for (_iterator2 = this.list[Symbol.iterator](); !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {i = _step2.value;
+                  if (i.id === id) {
+                    i.arr = res.data.data;
+                  }
+                }_context2.next = 16;break;case 12:_context2.prev = 12;_context2.t0 = _context2["catch"](8);_didIteratorError2 = true;_iteratorError2 = _context2.t0;case 16:_context2.prev = 16;_context2.prev = 17;if (!_iteratorNormalCompletion2 && _iterator2.return != null) {_iterator2.return();}case 19:_context2.prev = 19;if (!_didIteratorError2) {_context2.next = 22;break;}throw _iteratorError2;case 22:return _context2.finish(19);case 23:return _context2.finish(16);case 24:case "end":return _context2.stop();}}}, _callee2, this, [[8, 12, 16, 24], [17,, 19, 23]]);}));function selectProductsByCategory(_x) {return _selectProductsByCategory.apply(this, arguments);}return selectProductsByCategory;}(),
 
-    selectCategory: function () {var _selectCategory = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {var res;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:_context3.next = 2;return (
+
+    selectCategory: function () {var _selectCategory = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {var res, _iteratorNormalCompletion3, _didIteratorError3, _iteratorError3, _iterator3, _step3, i;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:_context3.next = 2;return (
                   this.$util.request({
                     requestUrl: 'api/category' }));case 2:res = _context3.sent;
 
-                console.log('查询所有类别：', res);
+                console.log('查询所有类别：', res);if (!(
 
-                if (res !== undefined) {
-                  this.list = res.data.data;
-                }case 5:case "end":return _context3.stop();}}}, _callee3, this);}));function selectCategory() {return _selectCategory.apply(this, arguments);}return selectCategory;}(),
+                res !== undefined)) {_context3.next = 25;break;}
+                this.list = res.data.data;_iteratorNormalCompletion3 = true;_didIteratorError3 = false;_iteratorError3 = undefined;_context3.prev = 9;
+                for (_iterator3 = this.list[Symbol.iterator](); !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {i = _step3.value;
+                  this.$set(i, 'arr', []);
+                }_context3.next = 17;break;case 13:_context3.prev = 13;_context3.t0 = _context3["catch"](9);_didIteratorError3 = true;_iteratorError3 = _context3.t0;case 17:_context3.prev = 17;_context3.prev = 18;if (!_iteratorNormalCompletion3 && _iterator3.return != null) {_iterator3.return();}case 20:_context3.prev = 20;if (!_didIteratorError3) {_context3.next = 23;break;}throw _iteratorError3;case 23:return _context3.finish(20);case 24:return _context3.finish(17);case 25:case "end":return _context3.stop();}}}, _callee3, this, [[9, 13, 17, 25], [18,, 20, 24]]);}));function selectCategory() {return _selectCategory.apply(this, arguments);}return selectCategory;}(),
+
 
     TabSelect: function TabSelect(e) {
       this.tabCur = e.currentTarget.dataset.id;
       this.mainCur = e.currentTarget.dataset.id;
       this.verticalNavTop = (e.currentTarget.dataset.id - 1) * 50;
-
-      this.selectProductsByCategory(this.list[this.tabCur].id);
     },
     VerticalMain: function VerticalMain(e) {var _this2 = this;
       var that = this;
