@@ -1,6 +1,8 @@
 <template>
 	<view>
-		<WaterfallFlow :list="list" :loading="false" @click="choose"></WaterfallFlow>
+		<view class="flow-container">
+			<WaterfallFlow :list="list" :loading="false" @click="choose"></WaterfallFlow>
+		</view>
 	</view>
 </template>
 
@@ -62,6 +64,10 @@
 				});
 				console.log('本店：', res);
 				if (res !== undefined) {
+					for(let i of res.data.data){
+						i.load=false;
+					}
+					
 					if(param==='more'){
 						this.list=this.list.concat(res.data.data);
 					}else{
@@ -87,6 +93,10 @@
 				});
 				console.log('流行：', res);
 				if (res !== undefined) {
+					for(let i of res.data.data){
+						i.load=false;
+					}
+					
 					if(param==='more'){
 						this.list=this.list.concat(res.data.data);
 					}else{
@@ -98,6 +108,8 @@
 	}
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+	.flow-container{
+		padding-top: 15px;
+	}
 </style>

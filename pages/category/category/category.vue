@@ -17,7 +17,7 @@
 					<view class="cu-card case isCard">
 						<view @tap="preview(item2.image)" v-for="(item2, index2) in item.arr" :key="index2" class="cu-item shadow right-card-item">
 							<view class="image">
-								<image :src="item2.image"
+								<image lazy-load :src="item2.image"
 								 mode="aspectFill"></image>
 								<view class="cu-bar bg-shadeBottom"> <text class="text-cut">{{item2.name}}</text></view>
 							</view>

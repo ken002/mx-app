@@ -1,5 +1,5 @@
 <template>
-	<view class="jly-body">
+	<view>
 		<view class="uni-swiper-msg">
 			<view class="uni-swiper-msg-icon cuIcon-notificationfill"></view>
 			<swiper vertical="true" autoplay="true" circular="true" interval="3000">
@@ -21,7 +21,7 @@
 			indicator-active-color="#39b54a"
 		>
 			<swiper-item @tap.stop="preview(item.image)" v-for="(item, index) in swiperArr" :key="index" :class="cardCur == index ? 'cur' : ''">
-				<view class="swiper-item"><image :src="item.image" mode="aspectFill"></image></view>
+				<view class="swiper-item"><image lazy-load :src="item.image" mode="aspectFill"></image></view>
 			</swiper-item>
 		</swiper>
 
@@ -34,8 +34,8 @@
 				<view class="action"><text @tap="toMore(1)">更多</text></view>
 			</view>
 			<view class="sample-show">
-				<view v-for="(item, index) in list" :key="index" class="item">
-					<view class="image-container"><image @tap="preview(item.image)" mode="aspectFill" :src="item.image"></image></view>
+				<view style="background-color:#fff;" v-for="(item, index) in list" :key="index" class="item">
+					<view class="image-container"><image lazy-load @tap="preview(item.image)" mode="aspectFill" :src="item.image"></image></view>
 					<view>
 						<text class="jly-text-overflow-two">{{ item.name }}</text>
 					</view>
@@ -51,8 +51,8 @@
 				<view class="action"><text @tap="toMore(2)">更多</text></view>
 			</view>
 			<view class="sample-show">
-				<view v-for="(item, index) in list2" :key="index" class="item">
-					<view class="image-container"><image @tap="preview(item.image)" mode="aspectFill" :src="item.image"></image></view>
+				<view style="background-color:#fff;" v-for="(item, index) in list2" :key="index" class="item">
+					<view class="image-container"><image lazy-load @tap="preview(item.image)" mode="aspectFill" :src="item.image"></image></view>
 					<view>
 						<text class="jly-text-overflow-two">{{ item.name }}</text>
 					</view>

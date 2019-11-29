@@ -1,0 +1,1 @@
+<view><waterfall-flow vue-id="1" list="{{list}}" loading="{{false}}" data-event-opts="{{[['^click',[['choose']]]]}}" bind:click="__e" bind:__l="__l"></waterfall-flow></view>
