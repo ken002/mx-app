@@ -2,9 +2,9 @@
 	<view class="jly-body">
 		<view class="uni-swiper-msg">
 			<view class="uni-swiper-msg-icon cuIcon-notificationfill"></view>
-			<swiper autoplay="true" circular="true" interval="5000">
+			<swiper vertical="true" autoplay="true" circular="true" interval="3000">
 				<swiper-item v-for="(item, index) in msg" :key="index">
-					<navigator>{{ item }}</navigator>
+					<text>{{ item.title }}</text>
 				</swiper-item>
 			</swiper>
 		</view>
@@ -71,26 +71,20 @@ export default {
 			cardCur: 0,
 			list: [],
 			list2: [],
-			msg: ['免费招学徒','涵盖业务:美甲、美睫、纹眉、修眉、打耳洞、小纹身等','联系方式:15180699664']
+			msg: []
 		};
 	},
 	onLoad() {
+		this.selectNotice();
 		this.selectAd();
-		setTimeout(() => {
-			this.selectSelfProducts();
-		}, 500);
-		setTimeout(() => {
-			this.selectCurrPopularProducts();
-		}, 1000);
+		this.selectSelfProducts();
+		this.selectCurrPopularProducts();
 	},
 	onPullDownRefresh() {
+		this.selectNotice();
 		this.selectAd();
-		setTimeout(() => {
-			this.selectSelfProducts();
-		}, 500);
-		setTimeout(() => {
-			this.selectCurrPopularProducts();
-		}, 1000);
+		this.selectSelfProducts();
+		this.selectCurrPopularProducts();
 	},
 	methods: {
 		preview(image) {
@@ -105,6 +99,18 @@ export default {
 		},
 		cardSwiper(e) {
 			this.cardCur = e.detail.current;
+		},
+		//公告
+		async selectNotice(){
+			const res = await this.$util.request({
+				requestUrl: 'api/notices'
+			});
+			console.log('公告：', res);
+			if (res !== undefined) {
+				this.msg = res.data.data;
+			} else {
+				uni.stopPullDownRefresh();
+			}
 		},
 		//广告位
 		async selectAd() {

@@ -47,6 +47,8 @@ export default {
 					await this.selectProductsByCategory(i.id);
 				}
 				console.log(this.list);
+			}else{
+				uni.stopPullDownRefresh();
 			}
 		})();
 	},
