@@ -8,6 +8,9 @@ App.mpType = 'app'
 import loading from './components/common/loading/loading';
 Vue.component('loading',loading);
 
+import imageCache from './components/common/image-cache/image-cache';
+Vue.component('image-cache',imageCache);
+
 const app = new Vue({
     ...App
 })

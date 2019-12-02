@@ -1,1 +1,0 @@
-<view><loading vue-id="1" isShow="{{loadingShow}}" bind:__l="__l"></loading></view>

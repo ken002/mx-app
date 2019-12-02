@@ -9,9 +9,8 @@
 			:data-index="index"
 			@click="choose"
 		>
-			<view class="pic fall-item-container">
-				<image class="item-image" src="../../../static/avatar2.jpg"></image>
-				<image @tap="preview(item.image)" class="image item-image" mode="aspectFill" :src="item.image"></image>
+			<view @tap="preview(item.image)" class="pic fall-item-container">
+				<image-cache loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item.image"></image-cache>
 			</view>
 			<view class="content">
 				<text>{{ item.name }}</text>

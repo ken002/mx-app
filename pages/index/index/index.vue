@@ -20,8 +20,8 @@
 			indicator-color="#8799a3"
 			indicator-active-color="#39b54a"
 		>
-			<swiper-item @tap.stop="preview(item.image)" v-for="(item, index) in swiperArr" :key="index" :class="cardCur == index ? 'cur' : ''">
-				<view class="swiper-item"><image lazy-load :src="item.image" mode="aspectFill"></image></view>
+			<swiper-item @tap.stop="preview(index, 'swiper')" v-for="(item, index) in swiperArr" :key="index" :class="cardCur == index ? 'cur' : ''">
+				<view class="swiper-item"><image-cache loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item.image"></image-cache></view>
 			</swiper-item>
 		</swiper>
 
@@ -35,7 +35,9 @@
 			</view>
 			<view class="sample-show">
 				<view style="background-color:#fff;" v-for="(item, index) in list" :key="index" class="item">
-					<view class="image-container"><image lazy-load @tap="preview(item.image)" mode="aspectFill" :src="item.image"></image></view>
+					<view @tap="preview(index, 'list')" class="image-container">
+						<image-cache loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item.image"></image-cache>
+					</view>
 					<view>
 						<text class="jly-text-overflow-two">{{ item.name }}</text>
 					</view>
@@ -52,7 +54,9 @@
 			</view>
 			<view class="sample-show">
 				<view style="background-color:#fff;" v-for="(item, index) in list2" :key="index" class="item">
-					<view class="image-container"><image lazy-load @tap="preview(item.image)" mode="aspectFill" :src="item.image"></image></view>
+					<view @tap="preview(index, 'list2')" class="image-container">
+						<image-cache loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item.image"></image-cache>
+					</view>
 					<view>
 						<text class="jly-text-overflow-two">{{ item.name }}</text>
 					</view>
@@ -67,10 +71,13 @@ export default {
 	data() {
 		return {
 			swiperArr: [],
+			swiperImageArr: [],
 			dotStyle: false,
 			cardCur: 0,
 			list: [],
+			imageList: [],
 			list2: [],
+			imageList2: [],
 			msg: []
 		};
 	},
@@ -87,9 +94,22 @@ export default {
 		this.selectCurrPopularProducts();
 	},
 	methods: {
-		preview(image) {
+		preview(index, type) {
+			var urls = [];
+			if (type === 'swiper') {
+				urls = this.swiperImageArr;
+			}
+			if (type === 'list') {
+				urls = this.imageList;
+			}
+			if (type === 'list2') {
+				urls = this.imageList2;
+			}
 			uni.previewImage({
-				urls: [image]
+				current: index,
+				loop: true,
+				indicator: 'default',
+				urls: urls
 			});
 		},
 		toMore(type) {
@@ -101,7 +121,7 @@ export default {
 			this.cardCur = e.detail.current;
 		},
 		//公告
-		async selectNotice(){
+		async selectNotice() {
 			const res = await this.$util.request({
 				requestUrl: 'api/notices'
 			});
@@ -120,6 +140,11 @@ export default {
 			console.log('广告：', res);
 			if (res !== undefined) {
 				this.swiperArr = res.data.data;
+
+				this.swiperImageArr = [];
+				for (let i of this.swiperArr) {
+					this.swiperImageArr.push(i.image);
+				}
 			} else {
 				uni.stopPullDownRefresh();
 			}
@@ -139,6 +164,11 @@ export default {
 			console.log('本店：', res);
 			if (res !== undefined) {
 				this.list = res.data.data;
+
+				this.imageList = [];
+				for (let i of this.list) {
+					this.imageList.push(i.image);
+				}
 			} else {
 				uni.stopPullDownRefresh();
 			}
@@ -159,6 +189,11 @@ export default {
 			console.log('流行：', res);
 			if (res !== undefined) {
 				this.list2 = res.data.data;
+
+				this.imageList2 = [];
+				for (let i of this.list2) {
+					this.imageList2.push(i.image);
+				}
 			}
 		}
 	}
