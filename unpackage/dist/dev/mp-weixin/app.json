@@ -1,8 +1,11 @@
 {
   "pages": [
+    "pages/my/login/login",
     "pages/index/index/index",
     "pages/category/category/category",
-    "pages/my/my/my"
+    "pages/my/my/my",
+    "pages/index/productList/productList",
+    "pages/my/about/about"
   ],
   "subPackages": [],
   "window": {
@@ -26,18 +29,19 @@
         "pagePath": "pages/category/category/category",
         "iconPath": "static/api.png",
         "selectedIconPath": "static/apiHL.png",
-        "text": "分类"
+        "text": "类别"
       },
       {
         "pagePath": "pages/my/my/my",
         "iconPath": "static/template.png",
         "selectedIconPath": "static/templateHL.png",
-        "text": "我的"
+        "text": "我"
       }
     ]
   },
   "usingComponents": {
-    "loading": "/components/common/loading/loading"
+    "loading": "/components/common/loading/loading",
+    "image-cache": "/components/common/image-cache/image-cache"
   },
-  "sitemapLocation": "sitemap28.json"
+  "sitemapLocation": "sitemap20.json"
 }

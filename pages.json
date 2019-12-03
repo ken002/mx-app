@@ -30,6 +30,30 @@
             "path" : "pages/index/productList/productList",
             "style" : {}
         }
+        ,{
+            "path" : "pages/my/recharge/recharge",
+            "style" : {
+				"navigationBarTitleText": "充值优惠"
+			}
+        }
+        ,{
+            "path" : "pages/my/priceExplain/priceExplain",
+            "style" : {
+				"navigationBarTitleText": "价格说明"
+			}
+        }
+        ,{
+            "path" : "pages/my/feedback/feedback",
+            "style" : {
+				"navigationBarTitleText": "反馈建议"
+			}
+        }
+        ,{
+            "path" : "pages/my/myCollection/myCollection",
+            "style" : {
+				"navigationBarTitleText": "我的收藏"
+			}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

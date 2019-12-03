@@ -32,7 +32,6 @@ export default {
 		}
 	},
 	created() {
-		console.log('image-containerinit');
 		this.init();
 	},
 	data() {
