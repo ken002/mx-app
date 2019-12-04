@@ -16,8 +16,7 @@
 		{
 			"path": "pages/category/category/category",
 			"style": {
-				"navigationBarTitleText": "类别",
-				"enablePullDownRefresh":true
+				"navigationBarTitleText": "类别"
 			}
 		},
 		{

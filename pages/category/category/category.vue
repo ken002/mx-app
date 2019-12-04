@@ -48,19 +48,6 @@ export default {
 	onHide(){
 		
 	},
-	onPullDownRefresh(){
-		(async ()=>{
-			await this.selectCategory();
-			if(this.list.length>0){
-				for(let i of this.list){
-					await this.selectProductsByCategory(i.id);
-				}
-				console.log(this.list);
-			}else{
-				uni.stopPullDownRefresh();
-			}
-		})();
-	},
 	onLoad(){
 		(async ()=>{
 			await this.selectCategory();
@@ -77,7 +64,6 @@ export default {
 			const res = await this.$util.request({
 				requestUrl: 'api/productsByCategory/'+id,
 			});
-			uni.stopPullDownRefresh();
 			console.log('某类下的商品：', res);
 			if(res!==undefined){
 				for(let i of this.list){
@@ -98,8 +84,6 @@ export default {
 				for(let i of this.list){
 					this.$set(i, 'arr', []);
 				}
-			}else{
-				uni.stopPullDownRefresh();
 			}
 		},
 		TabSelect(e) {
