@@ -15,9 +15,13 @@
 						</view>
 					</view>
 					<view class="cu-card case isCard">
-						<view @tap="preview(item2.image)" v-for="(item2, index2) in item.arr" :key="index2" class="cu-item shadow right-card-item">
+						<view v-for="(item2, index2) in item.arr" :key="index2" class="cu-item shadow right-card-item">
 							<view class="image">
-								<image-cache loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item2.image"></image-cache>
+								<image-cache v-if="item2.showType===0" loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item2.image"></image-cache>
+								<view class="jly-video-container" v-else>
+									<image-cache loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item2.image"></image-cache>
+									<video-play></video-play>
+								</view>
 								<view class="cu-bar bg-shadeBottom"> <text class="text-cut">{{item2.name}}</text></view>
 							</view>
 						</view>
@@ -37,6 +41,12 @@ export default {
 			mainCur: 0,
 			verticalNavTop: 0
 		};
+	},
+	onShow() {
+		
+	},
+	onHide(){
+		
 	},
 	onPullDownRefresh(){
 		(async ()=>{
@@ -63,11 +73,6 @@ export default {
 		})();
 	},
 	methods: {
-		preview(image){
-			uni.previewImage({
-				urls:[image]
-			})
-		},
 		async selectProductsByCategory(id) {
 			const res = await this.$util.request({
 				requestUrl: 'api/productsByCategory/'+id,

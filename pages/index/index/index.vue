@@ -35,8 +35,12 @@
 			</view>
 			<view class="sample-show">
 				<view style="background-color:#fff;" v-for="(item, index) in list" :key="index" class="item">
-					<view @tap="preview(index, 'list')" class="image-container">
-						<image-cache loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item.image"></image-cache>
+					<view class="image-container">
+						<image-cache v-if="item.showType === 0" loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item.image"></image-cache>
+						<view class="jly-video-container" v-else>
+							<image-cache loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item.image"></image-cache>
+							<video-play></video-play>
+						</view>
 					</view>
 					<view>
 						<text class="jly-text-overflow-two">{{ item.name }}</text>
@@ -54,8 +58,12 @@
 			</view>
 			<view class="sample-show">
 				<view style="background-color:#fff;" v-for="(item, index) in list2" :key="index" class="item">
-					<view @tap="preview(index, 'list2')" class="image-container">
-						<image-cache loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item.image"></image-cache>
+					<view class="image-container">
+						<image-cache v-if="item.showType === 0" loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item.image"></image-cache>
+						<view class="jly-video-container" v-else>
+							<image-cache loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item.image"></image-cache>
+							<video-play></video-play>
+						</view>
 					</view>
 					<view>
 						<text class="jly-text-overflow-two">{{ item.name }}</text>
@@ -81,6 +89,12 @@ export default {
 			msg: []
 		};
 	},
+	onShow() {
+		
+	},
+	onHide(){
+		
+	},
 	onLoad() {
 		this.selectNotice();
 		this.selectAd();
@@ -98,12 +112,6 @@ export default {
 			var urls = [];
 			if (type === 'swiper') {
 				urls = this.swiperImageArr;
-			}
-			if (type === 'list') {
-				urls = this.imageList;
-			}
-			if (type === 'list2') {
-				urls = this.imageList2;
 			}
 			uni.previewImage({
 				current: index,
@@ -226,4 +234,5 @@ export default {
 		}
 	}
 }
+
 </style>

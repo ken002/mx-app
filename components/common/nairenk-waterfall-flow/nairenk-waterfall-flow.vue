@@ -9,8 +9,12 @@
 			:data-index="index"
 			@click="choose"
 		>
-			<view @tap="preview(item.image)" class="pic fall-item-container">
-				<image-cache loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item.image"></image-cache>
+			<view class="pic fall-item-container">
+				<image-cache v-if="item.showType===0" loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item.image"></image-cache>
+				<view class="jly-video-container" v-else>
+					<image-cache loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item.image"></image-cache>
+					<video-play></video-play>
+				</view>
 			</view>
 			<view class="content">
 				<text>{{ item.name }}</text>
@@ -63,11 +67,6 @@ export default {
 		}
 	},
 	methods: {
-		preview(image) {
-			uni.previewImage({
-				urls: [image]
-			});
-		},
 		// 瀑布流定位
 		waterFall() {
 			const query = uni.createSelectorQuery().in(this);
@@ -164,4 +163,5 @@ export default {
 		height: 100%;
 	}
 }
+
 </style>

@@ -12,6 +12,12 @@
 		components:{
 			WaterfallFlow
 		},
+		onShow() {
+			
+		},
+		onHide(){
+			
+		},
 		data() {
 			return {
 				page:1,

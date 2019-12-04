@@ -19,6 +19,7 @@
   },
   "permissions": {
     "OAuth": {},
+    "VideoPlayer": {},
     "UniNView": {
       "description": "UniNView原生渲染"
     }

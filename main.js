@@ -11,6 +11,12 @@ Vue.component('loading',loading);
 import imageCache from './components/common/image-cache/image-cache';
 Vue.component('image-cache',imageCache);
 
+import videoCache from './components/current/video-cache/video-cache';
+Vue.component('video-cache',videoCache);
+
+import videoPlay from './components/current/video-play/video-play';
+Vue.component('video-play',videoPlay);
+
 const app = new Vue({
     ...App
 })
