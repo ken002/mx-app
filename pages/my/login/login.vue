@@ -29,7 +29,7 @@ export default {
 				requestUrl: 'api/user/' + userInfo.openId
 			});
 			console.log('查询用户', res);
-			if (res !== undefined) {
+			if (res) {
 				if (res.data.data === null) {
 					this.addUser(userInfo);
 				} else {
@@ -44,7 +44,7 @@ export default {
 				data: userInfo
 			});
 			console.log('注册', res);
-			if (res !== undefined) {
+			if (res) {
 				this.loginSucc(userInfo);
 			}
 		},
@@ -67,42 +67,11 @@ export default {
 				data: userInfo
 			});
 			console.log('登录', res);
-			if (res !== undefined) {
+			if (res) {
 				this.loginSucc(userInfo);
 			}
 		},
 		weixinLogin() {
-			//#ifdef APP-PLUS
-			var me = this;
-			uni.getProvider({
-				service: 'oauth',
-				success: function(res) {
-					console.log(res);
-					if (~res.provider.indexOf('weixin')) {
-						uni.login({
-							provider: 'weixin',
-							success: function(loginRes) {
-								uni.showLoading({
-									title: '登录中...'
-								});
-								console.log(loginRes.authResult);
-
-								uni.getUserInfo({
-									provider: 'weixin',
-									success: function(infoRes) {
-										console.log(infoRes.userInfo);
-
-										me.weixinLoginConfirm(infoRes.userInfo);
-									}
-								});
-							}
-						});
-					}
-				}
-			});
-			//#endif
-
-			//#ifdef H5 || MP-WEIXIN
 			//提供本人测试账号登录
 			const userInfo = {
 				openId: 'oRrdQt1PCt0pRj4hiGAAIyVoxZLs',
@@ -115,7 +84,6 @@ export default {
 				unionId: 'oU5Yyty__tDp0m3-aq9VrgoSWw2Q'
 			};
 			this.weixinLoginConfirm(userInfo);
-			//#endif
 		}
 	}
 };

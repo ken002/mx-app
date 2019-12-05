@@ -1,9 +1,15 @@
 {
   "pages": [
     "pages/index/index/index",
+    "pages/my/login/login",
     "pages/category/category/category",
     "pages/my/my/my",
-    "pages/index/productList/productList"
+    "pages/index/productList/productList",
+    "pages/my/recharge/recharge",
+    "pages/my/priceExplain/priceExplain",
+    "pages/my/feedback/feedback",
+    "pages/my/myCollection/myCollection",
+    "pages/index/productDetail/productDetail"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -45,6 +51,9 @@
   "appname": "MX美甲",
   "compilerVersion": "2.4.2",
   "usingComponents": {
-    "loading": "/components/common/loading/loading"
+    "loading": "/components/common/loading/loading",
+    "image-cache": "/components/common/image-cache/image-cache",
+    "video-cache": "/components/current/video-cache/video-cache",
+    "video-play": "/components/current/video-play/video-play"
   }
 }

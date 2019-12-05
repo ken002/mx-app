@@ -1,0 +1,2 @@
+setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"bottom.",[1],"data-v-183bc9cb { position: fixed; bottom: 30px; width: 100%; text-align: center; }\n.",[1],"bottom wx-image.",[1],"data-v-183bc9cb { width: 49px; height: 40px; }\n",],undefined,{path:"./pages/my/login/login.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/my/login/login.wxml') } }));

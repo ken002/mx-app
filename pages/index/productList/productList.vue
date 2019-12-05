@@ -49,8 +49,8 @@
 			}
 		},
 		methods: {
-			choose(){
-				
+			choose(item){
+				this.$util.toProductDetail(item);
 			},
 			async selectSelfProducts(param) {
 				if(param==='more'){
@@ -69,7 +69,7 @@
 					}
 				});
 				console.log('本店：', res);
-				if (res !== undefined) {
+				if (res) {
 					for(let i of res.data.data){
 						i.load=false;
 					}
@@ -98,7 +98,7 @@
 					}
 				});
 				console.log('流行：', res);
-				if (res !== undefined) {
+				if (res) {
 					for(let i of res.data.data){
 						i.load=false;
 					}

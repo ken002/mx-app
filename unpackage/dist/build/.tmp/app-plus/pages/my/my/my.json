@@ -1,6 +1,4 @@
 {
   "navigationBarTitleText": "我",
-  "usingComponents": {
-    "loading": "/components/common/loading/loading"
-  }
+  "usingComponents": {}
 }

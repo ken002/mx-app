@@ -1,5 +1,8 @@
 {
   "navigationBarTitleText": "MX美甲",
   "enablePullDownRefresh": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "image-cache": "/components/common/image-cache/image-cache",
+    "video-play": "/components/current/video-play/video-play"
+  }
 }

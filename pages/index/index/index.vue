@@ -35,7 +35,7 @@
 			</view>
 			<view class="sample-show">
 				<view style="background-color:#fff;" v-for="(item, index) in list" :key="index" class="item">
-					<view class="image-container">
+					<view @tap="toDetail(item)" class="image-container">
 						<image-cache v-if="item.showType === 0" loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item.image"></image-cache>
 						<view class="jly-video-container" v-else>
 							<image-cache loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item.image"></image-cache>
@@ -58,7 +58,7 @@
 			</view>
 			<view class="sample-show">
 				<view style="background-color:#fff;" v-for="(item, index) in list2" :key="index" class="item">
-					<view class="image-container">
+					<view @tap="toDetail(item)" class="image-container">
 						<image-cache v-if="item.showType === 0" loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item.image"></image-cache>
 						<view class="jly-video-container" v-else>
 							<image-cache loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item.image"></image-cache>
@@ -102,13 +102,13 @@ export default {
 		this.selectCurrPopularProducts();
 	},
 	onPullDownRefresh() {
-		this.swiperArr=[];
-		this.swiperImageArr=[];
-		this.msg=[];
-		this.list=[];
-		this.imageList=[];
-		this.list2=[];
-		this.imageList2=[];
+		// this.swiperArr=[];
+		// this.swiperImageArr=[];
+		// this.msg=[];
+		// this.list=[];
+		// this.imageList=[];
+		// this.list2=[];
+		// this.imageList2=[];
 		
 		this.selectNotice();
 		this.selectAd();
@@ -128,6 +128,9 @@ export default {
 				urls: urls
 			});
 		},
+		toDetail(item){
+			this.$util.toProductDetail(item);
+		},
 		toMore(type) {
 			uni.navigateTo({
 				url: `../productList/productList?type=${type}`
@@ -142,7 +145,7 @@ export default {
 				requestUrl: 'api/notices'
 			});
 			console.log('公告：', res);
-			if (res !== undefined) {
+			if (res) {
 				this.msg = res.data.data;
 			} else {
 				uni.stopPullDownRefresh();
@@ -154,7 +157,7 @@ export default {
 				requestUrl: 'api/ads'
 			});
 			console.log('广告：', res);
-			if (res !== undefined) {
+			if (res) {
 				this.swiperArr = res.data.data;
 
 				for (let i of this.swiperArr) {
@@ -177,7 +180,7 @@ export default {
 				}
 			});
 			console.log('本店：', res);
-			if (res !== undefined) {
+			if (res) {
 				this.list = res.data.data;
 
 				for (let i of this.list) {
@@ -201,7 +204,7 @@ export default {
 			});
 			uni.stopPullDownRefresh();
 			console.log('流行：', res);
-			if (res !== undefined) {
+			if (res) {
 				this.list2 = res.data.data;
 
 				for (let i of this.list2) {

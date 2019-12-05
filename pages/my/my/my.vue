@@ -44,6 +44,11 @@ export default {
 	},
 	onLoad() {
 		this.userInfo = uni.getStorageSync('userInfo');
+		if(this.userInfo===null || this.userInfo===''){
+			uni.reLaunch({
+				url: '../login/login'
+			});
+		}
 	},
 	methods: {
 		toMyCollection(){

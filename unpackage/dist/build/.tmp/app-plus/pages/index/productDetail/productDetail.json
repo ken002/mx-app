@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "详情",
+  "usingComponents": {
+    "image-cache": "/components/common/image-cache/image-cache",
+    "video-cache": "/components/current/video-cache/video-cache"
+  }
+}

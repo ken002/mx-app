@@ -16,7 +16,7 @@
 					</view>
 					<view class="cu-card case isCard">
 						<view v-for="(item2, index2) in item.arr" :key="index2" class="cu-item shadow right-card-item">
-							<view class="image">
+							<view @tap="toDetail(item2)" class="image">
 								<image-cache v-if="item2.showType===0" loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item2.image"></image-cache>
 								<view class="jly-video-container" v-else>
 									<image-cache loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item2.image"></image-cache>
@@ -60,12 +60,15 @@ export default {
 		})();
 	},
 	methods: {
+		toDetail(item){
+			this.$util.toProductDetail(item);
+		},
 		async selectProductsByCategory(id) {
 			const res = await this.$util.request({
 				requestUrl: 'api/productsByCategory/'+id,
 			});
 			console.log('某类下的商品：', res);
-			if(res!==undefined){
+			if(res){
 				for(let i of this.list){
 					if(i.id===id){
 						i.arr=res.data.data;
@@ -79,7 +82,7 @@ export default {
 			});
 			console.log('查询所有类别：',res);
 			
-			if(res!==undefined){
+			if(res){
 				this.list = res.data.data;
 				for(let i of this.list){
 					this.$set(i, 'arr', []);
