@@ -1,6 +1,6 @@
 <template>
 	<view>
-		
+		<web-view :webview-styles="webviewStyles" src="http://180.76.175.210:8082/back"></web-view>
 	</view>
 </template>
 
@@ -8,7 +8,9 @@
 	export default {
 		data() {
 			return {
-				
+				webviewStyles:{
+					progress:true
+				}
 			}
 		},
 		methods: {

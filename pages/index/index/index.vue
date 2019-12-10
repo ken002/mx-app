@@ -102,14 +102,6 @@ export default {
 		this.selectCurrPopularProducts();
 	},
 	onPullDownRefresh() {
-		// this.swiperArr=[];
-		// this.swiperImageArr=[];
-		// this.msg=[];
-		// this.list=[];
-		// this.imageList=[];
-		// this.list2=[];
-		// this.imageList2=[];
-		
 		this.selectNotice();
 		this.selectAd();
 		this.selectSelfProducts();
@@ -159,7 +151,7 @@ export default {
 			console.log('广告：', res);
 			if (res) {
 				this.swiperArr = res.data.data;
-
+				this.swiperImageArr=[];
 				for (let i of this.swiperArr) {
 					this.swiperImageArr.push(i.image);
 				}
@@ -182,7 +174,7 @@ export default {
 			console.log('本店：', res);
 			if (res) {
 				this.list = res.data.data;
-
+				this.imageList=[];
 				for (let i of this.list) {
 					this.imageList.push(i.image);
 				}
@@ -206,7 +198,7 @@ export default {
 			console.log('流行：', res);
 			if (res) {
 				this.list2 = res.data.data;
-
+				this.imageList2=[];
 				for (let i of this.list2) {
 					this.imageList2.push(i.image);
 				}

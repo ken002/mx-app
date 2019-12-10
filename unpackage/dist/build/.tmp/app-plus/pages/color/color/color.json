@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "色板",
+  "usingComponents": {
+    "image-cache": "/components/common/image-cache/image-cache"
+  }
+}

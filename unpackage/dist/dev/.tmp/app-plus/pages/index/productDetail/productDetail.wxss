@@ -27,4 +27,7 @@
 .image-container.data-v-9ea05e0a {
   height: 200px;
 }
+.padding.data-v-9ea05e0a {
+  padding: 20px;
+}
 

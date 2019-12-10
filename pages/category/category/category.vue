@@ -42,11 +42,16 @@ export default {
 			verticalNavTop: 0
 		};
 	},
-	onShow() {
-		
-	},
-	onHide(){
-		
+	onPullDownRefresh(){
+		(async ()=>{
+			await this.selectCategory();
+			if(this.list.length>0){
+				for(let i of this.list){
+					await this.selectProductsByCategory(i.id);
+				}
+				console.log(this.list);
+			}
+		})();
 	},
 	onLoad(){
 		(async ()=>{
@@ -74,6 +79,11 @@ export default {
 						i.arr=res.data.data;
 					}
 				}
+				if(this.list[this.list.length-1].id===id){
+					uni.stopPullDownRefresh();
+				}
+			}else{
+				uni.stopPullDownRefresh();
 			}
 		},
 		async selectCategory() {
@@ -87,6 +97,8 @@ export default {
 				for(let i of this.list){
 					this.$set(i, 'arr', []);
 				}
+			}else{
+				uni.stopPullDownRefresh();
 			}
 		},
 		TabSelect(e) {

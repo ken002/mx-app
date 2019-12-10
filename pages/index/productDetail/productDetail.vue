@@ -4,6 +4,11 @@
 			<image-cache @tap="toPreview" v-if="productDetail.showType===0" :src="productDetail.image" mode="aspectFill"></image-cache>
 			<video-cache v-else :src="productDetail.video"></video-cache>
 		</view>
+		<view class="padding">
+			<view>{{productDetail.name}}</view>
+			<view>{{productDetail.intro}}</view>
+		</view>
+		<view class="padding flex flex-direction"><button @tap="addCollection" class="cu-btn bg-blue lg">添加到我的收藏</button></view>
 	</view>
 </template>
 
@@ -19,6 +24,9 @@ export default {
 		this.productDetail = params.productDetail;
 	},
 	methods: {
+		addCollection(){
+			
+		},
 		toPreview(){
 			uni.previewImage({
 				current: this.productDetail.image,
@@ -32,5 +40,8 @@ export default {
 <style lang="scss" scoped>
 .image-container {
 	height: 200px;
+}
+.padding{
+	padding: 20px;
 }
 </style>

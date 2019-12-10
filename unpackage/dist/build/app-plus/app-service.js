@@ -1120,10 +1120,10 @@ if( __WXML_GLOBAL__.ops_cached.$gwx_6)return __WXML_GLOBAL__.ops_cached.$gwx_6
 __WXML_GLOBAL__.ops_cached.$gwx_6=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
 Z([3,'__e'])
-Z([3,'VerticalMain data-v-8844f26c'])
+Z([3,'VerticalMain data-v-dec56e5c'])
 Z([[4],[[5],[[4],[[5],[[5],[1,'scroll']],[[4],[[5],[[4],[[5],[[5],[1,'VerticalMain']],[[4],[[5],[1,'$event']]]]]]]]]]])
 Z([[2,'+'],[1,'main-'],[[7],[3,'mainCur']]])
-Z([3,'height:calc(100vh - 375rpx);'])
+Z([3,'height:calc(100vh - 250rpx);'])
 Z([3,'index'])
 Z([3,'item'])
 Z([[7],[3,'list']])
@@ -1133,16 +1133,16 @@ Z([3,'item2'])
 Z([[6],[[7],[3,'item']],[3,'arr']])
 Z(z[9])
 Z(z[0])
-Z([3,'image data-v-8844f26c'])
+Z([3,'image data-v-dec56e5c'])
 Z([[4],[[5],[[4],[[5],[[5],[1,'tap']],[[4],[[5],[[4],[[5],[[5],[[5],[1,'toDetail']],[[4],[[5],[1,'$0']]]],[[4],[[5],[[4],[[5],[[5],[[4],[[5],[[5],[[5],[1,'list']],[1,'']],[[7],[3,'index']]]]],[[4],[[5],[[5],[[5],[1,'arr']],[1,'']],[[7],[3,'index2']]]]]]]]]]]]]]]])
 Z([[2,'==='],[[6],[[7],[3,'item2']],[3,'showType']],[1,0]])
 Z([3,'__l'])
-Z([3,'data-v-8844f26c'])
+Z([3,'data-v-dec56e5c'])
 Z([3,'\x27/static/avatar.jpg\x27'])
 Z(z[19])
 Z([[6],[[7],[3,'item2']],[3,'image']])
 Z([[2,'+'],[[2,'+'],[[2,'+'],[1,'1-'],[[7],[3,'index']]],[1,'-']],[[7],[3,'index2']]])
-Z([3,'jly-video-container data-v-8844f26c'])
+Z([3,'jly-video-container data-v-dec56e5c'])
 Z(z[17])
 Z(z[18])
 Z(z[19])
@@ -1157,6 +1157,25 @@ Z([[2,'+'],[[2,'+'],[[2,'+'],[1,'3-'],[[7],[3,'index']]],[1,'-']],[[7],[3,'index
 function gz$gwx_7(){
 if( __WXML_GLOBAL__.ops_cached.$gwx_7)return __WXML_GLOBAL__.ops_cached.$gwx_7
 __WXML_GLOBAL__.ops_cached.$gwx_7=[];
+(function(z){var a=11;function Z(ops){z.push(ops)}
+Z([3,'index'])
+Z([3,'item'])
+Z([[7],[3,'list']])
+Z(z[0])
+Z([3,'__e'])
+Z([3,'cu-item bg-img shadow-blur color-item data-v-5fbc1311'])
+Z([[4],[[5],[[4],[[5],[[5],[1,'tap']],[[4],[[5],[[4],[[5],[[5],[1,'preview']],[[4],[[5],[[7],[3,'index']]]]]]]]]]]])
+Z([3,'__l'])
+Z([3,'data-v-5fbc1311'])
+Z([3,'\x27/static/avatar.jpg\x27'])
+Z(z[9])
+Z([[6],[[7],[3,'item']],[3,'image']])
+Z([[2,'+'],[1,'1-'],[[7],[3,'index']]])
+})(__WXML_GLOBAL__.ops_cached.$gwx_7);return __WXML_GLOBAL__.ops_cached.$gwx_7
+}
+function gz$gwx_8(){
+if( __WXML_GLOBAL__.ops_cached.$gwx_8)return __WXML_GLOBAL__.ops_cached.$gwx_8
+__WXML_GLOBAL__.ops_cached.$gwx_8=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
 Z([3,'data-v-bd76c9fc'])
 Z([1,true])
@@ -1230,11 +1249,11 @@ Z([[2,'+'],[1,'6-'],[[7],[3,'index']]])
 Z(z[18])
 Z(z[0])
 Z([[2,'+'],[1,'7-'],[[7],[3,'index']]])
-})(__WXML_GLOBAL__.ops_cached.$gwx_7);return __WXML_GLOBAL__.ops_cached.$gwx_7
+})(__WXML_GLOBAL__.ops_cached.$gwx_8);return __WXML_GLOBAL__.ops_cached.$gwx_8
 }
-function gz$gwx_8(){
-if( __WXML_GLOBAL__.ops_cached.$gwx_8)return __WXML_GLOBAL__.ops_cached.$gwx_8
-__WXML_GLOBAL__.ops_cached.$gwx_8=[];
+function gz$gwx_9(){
+if( __WXML_GLOBAL__.ops_cached.$gwx_9)return __WXML_GLOBAL__.ops_cached.$gwx_9
+__WXML_GLOBAL__.ops_cached.$gwx_9=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
 Z([3,'image-container data-v-1a93b4d8'])
 Z([[2,'==='],[[6],[[7],[3,'productDetail']],[3,'showType']],[1,0]])
@@ -1249,11 +1268,11 @@ Z(z[2])
 Z(z[4])
 Z([[6],[[7],[3,'productDetail']],[3,'video']])
 Z([3,'2'])
-})(__WXML_GLOBAL__.ops_cached.$gwx_8);return __WXML_GLOBAL__.ops_cached.$gwx_8
+})(__WXML_GLOBAL__.ops_cached.$gwx_9);return __WXML_GLOBAL__.ops_cached.$gwx_9
 }
-function gz$gwx_9(){
-if( __WXML_GLOBAL__.ops_cached.$gwx_9)return __WXML_GLOBAL__.ops_cached.$gwx_9
-__WXML_GLOBAL__.ops_cached.$gwx_9=[];
+function gz$gwx_10(){
+if( __WXML_GLOBAL__.ops_cached.$gwx_10)return __WXML_GLOBAL__.ops_cached.$gwx_10
+__WXML_GLOBAL__.ops_cached.$gwx_10=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
 Z([3,'__l'])
 Z([3,'__e'])
@@ -1262,12 +1281,6 @@ Z([[4],[[5],[[4],[[5],[[5],[1,'^click']],[[4],[[5],[[4],[[5],[1,'choose']]]]]]]]
 Z([[7],[3,'list']])
 Z([1,false])
 Z([3,'1'])
-})(__WXML_GLOBAL__.ops_cached.$gwx_9);return __WXML_GLOBAL__.ops_cached.$gwx_9
-}
-function gz$gwx_10(){
-if( __WXML_GLOBAL__.ops_cached.$gwx_10)return __WXML_GLOBAL__.ops_cached.$gwx_10
-__WXML_GLOBAL__.ops_cached.$gwx_10=[];
-(function(z){var a=11;function Z(ops){z.push(ops)}
 })(__WXML_GLOBAL__.ops_cached.$gwx_10);return __WXML_GLOBAL__.ops_cached.$gwx_10
 }
 function gz$gwx_11(){
@@ -1300,11 +1313,17 @@ __WXML_GLOBAL__.ops_cached.$gwx_15=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
 })(__WXML_GLOBAL__.ops_cached.$gwx_15);return __WXML_GLOBAL__.ops_cached.$gwx_15
 }
+function gz$gwx_16(){
+if( __WXML_GLOBAL__.ops_cached.$gwx_16)return __WXML_GLOBAL__.ops_cached.$gwx_16
+__WXML_GLOBAL__.ops_cached.$gwx_16=[];
+(function(z){var a=11;function Z(ops){z.push(ops)}
+})(__WXML_GLOBAL__.ops_cached.$gwx_16);return __WXML_GLOBAL__.ops_cached.$gwx_16
+}
 __WXML_GLOBAL__.ops_set.$gwx=z;
 __WXML_GLOBAL__.ops_init.$gwx=true;
 var nv_require=function(){var nnm={};var nom={};return function(n){return function(){if(!nnm[n]) return undefined;try{if(!nom[n])nom[n]=nnm[n]();return nom[n];}catch(e){e.message=e.message.replace(/nv_/g,'');var tmp = e.stack.substring(0,e.stack.lastIndexOf(n));e.stack = tmp.substring(0,tmp.lastIndexOf('\n'));e.stack = e.stack.replace(/\snv_/g,' ');e.stack = $gstack(e.stack);e.stack += '\n    at ' + n.substring(2);console.error(e);}
 }}}()
-var x=['./components/common/image-cache/image-cache.wxml','./components/common/loading/loading.wxml','./components/common/nairenk-waterfall-flow/nairenk-waterfall-flow.wxml','./components/current/video-cache/video-cache.wxml','./components/current/video-play/video-play.wxml','./pages/category/category/category.wxml','./pages/index/index/index.wxml','./pages/index/productDetail/productDetail.wxml','./pages/index/productList/productList.wxml','./pages/my/feedback/feedback.wxml','./pages/my/login/login.wxml','./pages/my/my/my.wxml','./pages/my/myCollection/myCollection.wxml','./pages/my/priceExplain/priceExplain.wxml','./pages/my/recharge/recharge.wxml'];d_[x[0]]={}
+var x=['./components/common/image-cache/image-cache.wxml','./components/common/loading/loading.wxml','./components/common/nairenk-waterfall-flow/nairenk-waterfall-flow.wxml','./components/current/video-cache/video-cache.wxml','./components/current/video-play/video-play.wxml','./pages/category/category/category.wxml','./pages/color/color/color.wxml','./pages/index/index/index.wxml','./pages/index/productDetail/productDetail.wxml','./pages/index/productList/productList.wxml','./pages/my/feedback/feedback.wxml','./pages/my/login/login.wxml','./pages/my/my/my.wxml','./pages/my/myCollection/myCollection.wxml','./pages/my/priceExplain/priceExplain.wxml','./pages/my/recharge/recharge.wxml'];d_[x[0]]={}
 var m0=function(e,s,r,gg){
 var z=gz$gwx_1()
 return r
@@ -1414,112 +1433,123 @@ e_[x[5]]={f:m5,j:[],i:[],ti:[],ic:[]}
 d_[x[6]]={}
 var m6=function(e,s,r,gg){
 var z=gz$gwx_7()
-var tEB=_n('view')
-_rz(z,tEB,'class',0,e,s,gg)
-var eFB=_mz(z,'swiper',['autoplay',1,'bindchange',1,'circular',2,'class',3,'data-event-opts',4,'duration',5,'indicatorActiveColor',6,'indicatorColor',7,'indicatorDots',8,'interval',9],[],e,s,gg)
-var bGB=_v()
-_(eFB,bGB)
-var oHB=function(oJB,xIB,fKB,gg){
-var hMB=_mz(z,'swiper-item',['catchtap',15,'class',1,'data-event-opts',2],[],oJB,xIB,gg)
-var oNB=_mz(z,'image-cache',['bind:__l',18,'class',1,'errorImage',2,'loadingImage',3,'src',4,'vueId',5],[],oJB,xIB,gg)
-_(hMB,oNB)
-_(fKB,hMB)
-return fKB
-}
-bGB.wxXCkey=4
-_2z(z,13,oHB,e,s,gg,bGB,'item','index','index')
-_(tEB,eFB)
-var cOB=_v()
-_(tEB,cOB)
-var oPB=function(aRB,lQB,tSB,gg){
-var bUB=_mz(z,'view',['bindtap',28,'class',1,'data-event-opts',2],[],aRB,lQB,gg)
-var oVB=_v()
-_(bUB,oVB)
-if(_oz(z,31,aRB,lQB,gg)){oVB.wxVkey=1
-var xWB=_mz(z,'image-cache',['bind:__l',32,'class',1,'errorImage',2,'loadingImage',3,'src',4,'vueId',5],[],aRB,lQB,gg)
-_(oVB,xWB)
-}
-else{oVB.wxVkey=2
-var oXB=_n('view')
-_rz(z,oXB,'class',38,aRB,lQB,gg)
-var fYB=_mz(z,'image-cache',['bind:__l',39,'class',1,'errorImage',2,'loadingImage',3,'src',4,'vueId',5],[],aRB,lQB,gg)
-_(oXB,fYB)
-var cZB=_mz(z,'video-play',['bind:__l',45,'class',1,'vueId',2],[],aRB,lQB,gg)
-_(oXB,cZB)
-_(oVB,oXB)
-}
-oVB.wxXCkey=1
-oVB.wxXCkey=3
-oVB.wxXCkey=3
-_(tSB,bUB)
-return tSB
-}
-cOB.wxXCkey=4
-_2z(z,26,oPB,e,s,gg,cOB,'item','index','index')
-var h1B=_v()
-_(tEB,h1B)
-var o2B=function(o4B,c3B,l5B,gg){
-var t7B=_mz(z,'view',['bindtap',52,'class',1,'data-event-opts',2],[],o4B,c3B,gg)
-var e8B=_v()
-_(t7B,e8B)
-if(_oz(z,55,o4B,c3B,gg)){e8B.wxVkey=1
-var b9B=_mz(z,'image-cache',['bind:__l',56,'class',1,'errorImage',2,'loadingImage',3,'src',4,'vueId',5],[],o4B,c3B,gg)
-_(e8B,b9B)
-}
-else{e8B.wxVkey=2
-var o0B=_n('view')
-_rz(z,o0B,'class',62,o4B,c3B,gg)
-var xAC=_mz(z,'image-cache',['bind:__l',63,'class',1,'errorImage',2,'loadingImage',3,'src',4,'vueId',5],[],o4B,c3B,gg)
-_(o0B,xAC)
-var oBC=_mz(z,'video-play',['bind:__l',69,'class',1,'vueId',2],[],o4B,c3B,gg)
-_(o0B,oBC)
-_(e8B,o0B)
-}
-e8B.wxXCkey=1
-e8B.wxXCkey=3
-e8B.wxXCkey=3
-_(l5B,t7B)
-return l5B
-}
-h1B.wxXCkey=4
-_2z(z,50,o2B,e,s,gg,h1B,'item','index','index')
+var tEB=_v()
 _(r,tEB)
+var eFB=function(oHB,bGB,xIB,gg){
+var fKB=_mz(z,'view',['bindtap',4,'class',1,'data-event-opts',2],[],oHB,bGB,gg)
+var cLB=_mz(z,'image-cache',['bind:__l',7,'class',1,'errorImage',2,'loadingImage',3,'src',4,'vueId',5],[],oHB,bGB,gg)
+_(fKB,cLB)
+_(xIB,fKB)
+return xIB
+}
+tEB.wxXCkey=4
+_2z(z,2,eFB,e,s,gg,tEB,'item','index','index')
 return r
 }
 e_[x[6]]={f:m6,j:[],i:[],ti:[],ic:[]}
 d_[x[7]]={}
 var m7=function(e,s,r,gg){
 var z=gz$gwx_8()
-var cDC=_n('view')
-_rz(z,cDC,'class',0,e,s,gg)
-var hEC=_v()
-_(cDC,hEC)
-if(_oz(z,1,e,s,gg)){hEC.wxVkey=1
-var oFC=_mz(z,'image-cache',['bind:__l',2,'bind:tap',1,'class',2,'data-event-opts',3,'mode',4,'src',5,'vueId',6],[],e,s,gg)
-_(hEC,oFC)
+var oNB=_n('view')
+_rz(z,oNB,'class',0,e,s,gg)
+var cOB=_mz(z,'swiper',['autoplay',1,'bindchange',1,'circular',2,'class',3,'data-event-opts',4,'duration',5,'indicatorActiveColor',6,'indicatorColor',7,'indicatorDots',8,'interval',9],[],e,s,gg)
+var oPB=_v()
+_(cOB,oPB)
+var lQB=function(tSB,aRB,eTB,gg){
+var oVB=_mz(z,'swiper-item',['catchtap',15,'class',1,'data-event-opts',2],[],tSB,aRB,gg)
+var xWB=_mz(z,'image-cache',['bind:__l',18,'class',1,'errorImage',2,'loadingImage',3,'src',4,'vueId',5],[],tSB,aRB,gg)
+_(oVB,xWB)
+_(eTB,oVB)
+return eTB
 }
-else{hEC.wxVkey=2
-var cGC=_mz(z,'video-cache',['bind:__l',9,'class',1,'src',2,'vueId',3],[],e,s,gg)
-_(hEC,cGC)
+oPB.wxXCkey=4
+_2z(z,13,lQB,e,s,gg,oPB,'item','index','index')
+_(oNB,cOB)
+var oXB=_v()
+_(oNB,oXB)
+var fYB=function(h1B,cZB,o2B,gg){
+var o4B=_mz(z,'view',['bindtap',28,'class',1,'data-event-opts',2],[],h1B,cZB,gg)
+var l5B=_v()
+_(o4B,l5B)
+if(_oz(z,31,h1B,cZB,gg)){l5B.wxVkey=1
+var a6B=_mz(z,'image-cache',['bind:__l',32,'class',1,'errorImage',2,'loadingImage',3,'src',4,'vueId',5],[],h1B,cZB,gg)
+_(l5B,a6B)
 }
-hEC.wxXCkey=1
-hEC.wxXCkey=3
-hEC.wxXCkey=3
-_(r,cDC)
+else{l5B.wxVkey=2
+var t7B=_n('view')
+_rz(z,t7B,'class',38,h1B,cZB,gg)
+var e8B=_mz(z,'image-cache',['bind:__l',39,'class',1,'errorImage',2,'loadingImage',3,'src',4,'vueId',5],[],h1B,cZB,gg)
+_(t7B,e8B)
+var b9B=_mz(z,'video-play',['bind:__l',45,'class',1,'vueId',2],[],h1B,cZB,gg)
+_(t7B,b9B)
+_(l5B,t7B)
+}
+l5B.wxXCkey=1
+l5B.wxXCkey=3
+l5B.wxXCkey=3
+_(o2B,o4B)
+return o2B
+}
+oXB.wxXCkey=4
+_2z(z,26,fYB,e,s,gg,oXB,'item','index','index')
+var o0B=_v()
+_(oNB,o0B)
+var xAC=function(fCC,oBC,cDC,gg){
+var oFC=_mz(z,'view',['bindtap',52,'class',1,'data-event-opts',2],[],fCC,oBC,gg)
+var cGC=_v()
+_(oFC,cGC)
+if(_oz(z,55,fCC,oBC,gg)){cGC.wxVkey=1
+var oHC=_mz(z,'image-cache',['bind:__l',56,'class',1,'errorImage',2,'loadingImage',3,'src',4,'vueId',5],[],fCC,oBC,gg)
+_(cGC,oHC)
+}
+else{cGC.wxVkey=2
+var lIC=_n('view')
+_rz(z,lIC,'class',62,fCC,oBC,gg)
+var aJC=_mz(z,'image-cache',['bind:__l',63,'class',1,'errorImage',2,'loadingImage',3,'src',4,'vueId',5],[],fCC,oBC,gg)
+_(lIC,aJC)
+var tKC=_mz(z,'video-play',['bind:__l',69,'class',1,'vueId',2],[],fCC,oBC,gg)
+_(lIC,tKC)
+_(cGC,lIC)
+}
+cGC.wxXCkey=1
+cGC.wxXCkey=3
+cGC.wxXCkey=3
+_(cDC,oFC)
+return cDC
+}
+o0B.wxXCkey=4
+_2z(z,50,xAC,e,s,gg,o0B,'item','index','index')
+_(r,oNB)
 return r
 }
 e_[x[7]]={f:m7,j:[],i:[],ti:[],ic:[]}
 d_[x[8]]={}
 var m8=function(e,s,r,gg){
 var z=gz$gwx_9()
-var lIC=_mz(z,'waterfall-flow',['bind:__l',0,'bind:click',1,'class',1,'data-event-opts',2,'list',3,'loading',4,'vueId',5],[],e,s,gg)
-_(r,lIC)
+var bMC=_n('view')
+_rz(z,bMC,'class',0,e,s,gg)
+var oNC=_v()
+_(bMC,oNC)
+if(_oz(z,1,e,s,gg)){oNC.wxVkey=1
+var xOC=_mz(z,'image-cache',['bind:__l',2,'bind:tap',1,'class',2,'data-event-opts',3,'mode',4,'src',5,'vueId',6],[],e,s,gg)
+_(oNC,xOC)
+}
+else{oNC.wxVkey=2
+var oPC=_mz(z,'video-cache',['bind:__l',9,'class',1,'src',2,'vueId',3],[],e,s,gg)
+_(oNC,oPC)
+}
+oNC.wxXCkey=1
+oNC.wxXCkey=3
+oNC.wxXCkey=3
+_(r,bMC)
 return r
 }
 e_[x[8]]={f:m8,j:[],i:[],ti:[],ic:[]}
 d_[x[9]]={}
 var m9=function(e,s,r,gg){
 var z=gz$gwx_10()
+var cRC=_mz(z,'waterfall-flow',['bind:__l',0,'bind:click',1,'class',1,'data-event-opts',2,'list',3,'loading',4,'vueId',5],[],e,s,gg)
+_(r,cRC)
 return r
 }
 e_[x[9]]={f:m9,j:[],i:[],ti:[],ic:[]}
@@ -1553,6 +1583,12 @@ var z=gz$gwx_15()
 return r
 }
 e_[x[14]]={f:m14,j:[],i:[],ti:[],ic:[]}
+d_[x[15]]={}
+var m15=function(e,s,r,gg){
+var z=gz$gwx_16()
+return r
+}
+e_[x[15]]={f:m15,j:[],i:[],ti:[],ic:[]}
 if(path&&e_[path]){
 return function(env,dd,global){$gwxc=0;var root={"tag":"wx-page"};root.children=[]
 var main=e_[path].f
@@ -1570,7 +1606,7 @@ return root;
 
 
 
-__wxAppCode__['app.json']={"pages":["pages/index/index/index","pages/my/login/login","pages/category/category/category","pages/my/my/my","pages/index/productList/productList","pages/my/recharge/recharge","pages/my/priceExplain/priceExplain","pages/my/feedback/feedback","pages/my/myCollection/myCollection","pages/index/productDetail/productDetail"],"window":{"navigationBarTextStyle":"black","navigationBarBackgroundColor":"#F8F8F8","backgroundColor":"#F8F8F8"},"tabBar":{"color":"#7A7E83","selectedColor":"#007AFF","borderStyle":"white","backgroundColor":"#F8F8F8","list":[{"pagePath":"pages/index/index/index","iconPath":"static/component.png","selectedIconPath":"static/componentHL.png","text":"首页"},{"pagePath":"pages/category/category/category","iconPath":"static/api.png","selectedIconPath":"static/apiHL.png","text":"类别"},{"pagePath":"pages/my/my/my","iconPath":"static/template.png","selectedIconPath":"static/templateHL.png","text":"我"}]},"nvueCompiler":"uni-app","renderer":"auto","splashscreen":{"alwaysShowBeforeRender":true,"autoclose":false},"appname":"MX美甲","compilerVersion":"2.4.2","usingComponents":{"loading":"/components/common/loading/loading","image-cache":"/components/common/image-cache/image-cache","video-cache":"/components/current/video-cache/video-cache","video-play":"/components/current/video-play/video-play"}};
+__wxAppCode__['app.json']={"pages":["pages/index/index/index","pages/my/login/login","pages/color/color/color","pages/category/category/category","pages/my/my/my","pages/index/productList/productList","pages/my/recharge/recharge","pages/my/priceExplain/priceExplain","pages/my/feedback/feedback","pages/my/myCollection/myCollection","pages/index/productDetail/productDetail"],"window":{"navigationBarTextStyle":"black","navigationBarBackgroundColor":"#F8F8F8","backgroundColor":"#F8F8F8"},"tabBar":{"color":"#7A7E83","selectedColor":"#007AFF","borderStyle":"white","backgroundColor":"#F8F8F8","list":[{"pagePath":"pages/index/index/index","iconPath":"static/component.png","selectedIconPath":"static/componentHL.png","text":"首页"},{"pagePath":"pages/color/color/color","iconPath":"static/extui.png","selectedIconPath":"static/extuiHL.png","text":"色板"},{"pagePath":"pages/category/category/category","iconPath":"static/api.png","selectedIconPath":"static/apiHL.png","text":"类别"},{"pagePath":"pages/my/my/my","iconPath":"static/template.png","selectedIconPath":"static/templateHL.png","text":"我"}]},"nvueCompiler":"uni-app","renderer":"auto","splashscreen":{"alwaysShowBeforeRender":true,"autoclose":false},"appname":"MX美甲","compilerVersion":"2.4.2","usingComponents":{"loading":"/components/common/loading/loading","image-cache":"/components/common/image-cache/image-cache","video-cache":"/components/current/video-cache/video-cache","video-play":"/components/current/video-play/video-play"}};
 __wxAppCode__['app.wxml']=$gwx('./app.wxml');
 
 __wxAppCode__['components/common/image-cache/image-cache.json']={"usingComponents":{},"component":true};
@@ -1590,6 +1626,9 @@ __wxAppCode__['components/current/video-play/video-play.wxml']=$gwx('./component
 
 __wxAppCode__['pages/category/category/category.json']={"navigationBarTitleText":"类别","usingComponents":{"image-cache":"/components/common/image-cache/image-cache","video-play":"/components/current/video-play/video-play"}};
 __wxAppCode__['pages/category/category/category.wxml']=$gwx('./pages/category/category/category.wxml');
+
+__wxAppCode__['pages/color/color/color.json']={"navigationBarTitleText":"色板","usingComponents":{"image-cache":"/components/common/image-cache/image-cache"}};
+__wxAppCode__['pages/color/color/color.wxml']=$gwx('./pages/color/color/color.wxml');
 
 __wxAppCode__['pages/index/index/index.json']={"navigationBarTitleText":"MX美甲","enablePullDownRefresh":true,"usingComponents":{"image-cache":"/components/common/image-cache/image-cache","video-play":"/components/current/video-play/video-play"}};
 __wxAppCode__['pages/index/index/index.wxml']=$gwx('./pages/index/index/index.wxml');
@@ -1801,7 +1840,7 @@ define('common/runtime.js',function(require, module, exports, window, document, 
 })([]);
 });
 define('common/vendor.js',function(require, module, exports, window, document, frames, self, location, navigator, localStorage, history, Caches, screen, alert, confirm, prompt, fetch, XMLHttpRequest, WebSocket, webkit, WeixinJSCore, Reporter, print, WeixinJSBridge){
-(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["common/vendor"],{"0de9":function(t,e,n){"use strict";function r(t){var e=Object.prototype.toString.call(t);return e.substring(8,e.length-1)}function o(){for(var t=arguments.length,e=new Array(t),n=0;n<t;n++)e[n]=arguments[n];var o=e.map(function(t){var e=Object.prototype.toString.call(t);if("[object object]"===e.toLowerCase())try{t="---BEGIN:JSON---"+JSON.stringify(t)+"---END:JSON---"}catch(o){t="[object object]"}else if(null===t)t="---NULL---";else if(void 0===t)t="---UNDEFINED---";else{var n=r(t).toUpperCase();t="NUMBER"===n||"BOOLEAN"===n?"---BEGIN:"+n+"---"+t+"---END:"+n+"---":String(t)}return t}),i="";if(o.length>1){var a=o.pop();i=o.join("---COMMA---"),0===a.indexOf(" at ")?i+=a:i+="---COMMA---"+a}else i=o[0];return i}Object.defineProperty(e,"__esModule",{value:!0}),e.default=o},"25a7":function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var r={appid:"__UNI__E150125"};e.default=r},2877:function(t,e,n){"use strict";function r(t,e,n,r,o,i,a,s){var u,c="function"===typeof t?t.options:t;if(e&&(c.render=e,c.staticRenderFns=n,c._compiled=!0),r&&(c.functional=!0),i&&(c._scopeId="data-v-"+i),a?(u=function(t){t=t||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext,t||"undefined"===typeof __VUE_SSR_CONTEXT__||(t=__VUE_SSR_CONTEXT__),o&&o.call(this,t),t&&t._registeredComponents&&t._registeredComponents.add(a)},c._ssrRegister=u):o&&(u=s?function(){o.call(this,this.$root.$options.shadowRoot)}:o),u)if(c.functional){c._injectStyles=u;var f=c.render;c.render=function(t,e){return u.call(e),f(t,e)}}else{var l=c.beforeCreate;c.beforeCreate=l?[].concat(l,u):[u]}return{exports:t,options:c}}n.d(e,"a",function(){return r})},"5a73":function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var r={pages:{"pages/index/index/index":{navigationBarTitleText:"MX美甲",enablePullDownRefresh:!0},"pages/my/login/login":{navigationBarTitleText:"登录"},"pages/category/category/category":{navigationBarTitleText:"类别"},"pages/my/my/my":{navigationBarTitleText:"我"},"pages/index/productList/productList":{},"pages/my/recharge/recharge":{navigationBarTitleText:"充值优惠"},"pages/my/priceExplain/priceExplain":{navigationBarTitleText:"价格说明"},"pages/my/feedback/feedback":{navigationBarTitleText:"反馈建议"},"pages/my/myCollection/myCollection":{navigationBarTitleText:"我的收藏"},"pages/index/productDetail/productDetail":{navigationBarTitleText:"详情"}},globalStyle:{navigationBarTextStyle:"black",navigationBarBackgroundColor:"#F8F8F8",backgroundColor:"#F8F8F8"}};e.default=r},"66fd":function(t,e,n){"use strict";n.r(e),function(t){
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["common/vendor"],{"0de9":function(t,e,n){"use strict";function r(t){var e=Object.prototype.toString.call(t);return e.substring(8,e.length-1)}function o(){for(var t=arguments.length,e=new Array(t),n=0;n<t;n++)e[n]=arguments[n];var o=e.map(function(t){var e=Object.prototype.toString.call(t);if("[object object]"===e.toLowerCase())try{t="---BEGIN:JSON---"+JSON.stringify(t)+"---END:JSON---"}catch(o){t="[object object]"}else if(null===t)t="---NULL---";else if(void 0===t)t="---UNDEFINED---";else{var n=r(t).toUpperCase();t="NUMBER"===n||"BOOLEAN"===n?"---BEGIN:"+n+"---"+t+"---END:"+n+"---":String(t)}return t}),i="";if(o.length>1){var a=o.pop();i=o.join("---COMMA---"),0===a.indexOf(" at ")?i+=a:i+="---COMMA---"+a}else i=o[0];return i}Object.defineProperty(e,"__esModule",{value:!0}),e.default=o},"25a7":function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var r={appid:"__UNI__E150125"};e.default=r},2877:function(t,e,n){"use strict";function r(t,e,n,r,o,i,a,s){var u,c="function"===typeof t?t.options:t;if(e&&(c.render=e,c.staticRenderFns=n,c._compiled=!0),r&&(c.functional=!0),i&&(c._scopeId="data-v-"+i),a?(u=function(t){t=t||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext,t||"undefined"===typeof __VUE_SSR_CONTEXT__||(t=__VUE_SSR_CONTEXT__),o&&o.call(this,t),t&&t._registeredComponents&&t._registeredComponents.add(a)},c._ssrRegister=u):o&&(u=s?function(){o.call(this,this.$root.$options.shadowRoot)}:o),u)if(c.functional){c._injectStyles=u;var f=c.render;c.render=function(t,e){return u.call(e),f(t,e)}}else{var l=c.beforeCreate;c.beforeCreate=l?[].concat(l,u):[u]}return{exports:t,options:c}}n.d(e,"a",function(){return r})},"5a73":function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var r={pages:{"pages/index/index/index":{navigationBarTitleText:"MX美甲",enablePullDownRefresh:!0},"pages/my/login/login":{navigationBarTitleText:"登录"},"pages/color/color/color":{navigationBarTitleText:"色板"},"pages/category/category/category":{navigationBarTitleText:"类别"},"pages/my/my/my":{navigationBarTitleText:"我"},"pages/index/productList/productList":{},"pages/my/recharge/recharge":{navigationBarTitleText:"充值优惠"},"pages/my/priceExplain/priceExplain":{navigationBarTitleText:"价格说明"},"pages/my/feedback/feedback":{navigationBarTitleText:"反馈建议"},"pages/my/myCollection/myCollection":{navigationBarTitleText:"我的收藏"},"pages/index/productDetail/productDetail":{navigationBarTitleText:"详情"}},globalStyle:{navigationBarTextStyle:"black",navigationBarBackgroundColor:"#F8F8F8",backgroundColor:"#F8F8F8"}};e.default=r},"66fd":function(t,e,n){"use strict";n.r(e),function(t){
 /*!
  * Vue.js v2.6.10
  * (c) 2014-2019 Evan You
@@ -2582,10 +2621,16 @@ define('pages/my/login/login.js',function(require, module, exports, window, docu
 (global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/my/login/login"],{"0f4b":function(n,t,e){},"188d":function(n,t,e){"use strict";(function(n){e("d1f0"),e("921b");i(e("66fd"));var t=i(e("7959"));function i(n){return n&&n.__esModule?n:{default:n}}n(t.default)}).call(this,e("6e42")["createPage"])},7959:function(n,t,e){"use strict";e.r(t);var i=e("c629"),r=e("e9db");for(var u in r)"default"!==u&&function(n){e.d(t,n,function(){return r[n]})}(u);e("a75a");var o=e("2877"),a=Object(o["a"])(r["default"],i["a"],i["b"],!1,null,"183bc9cb",null);t["default"]=a.exports},a75a:function(n,t,e){"use strict";var i=e("0f4b"),r=e.n(i);r.a},c629:function(n,t,e){"use strict";var i=function(){var n=this,t=n.$createElement;n._self._c},r=[];e.d(t,"a",function(){return i}),e.d(t,"b",function(){return r})},ca60:function(n,t,e){"use strict";(function(n,i){Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var r=u(e("a34a"));function u(n){return n&&n.__esModule?n:{default:n}}function o(n,t,e,i,r,u,o){try{var a=n[u](o),c=a.value}catch(s){return void e(s)}a.done?t(c):Promise.resolve(c).then(i,r)}function a(n){return function(){var t=this,e=arguments;return new Promise(function(i,r){var u=n.apply(t,e);function a(n){o(u,i,r,a,c,"next",n)}function c(n){o(u,i,r,a,c,"throw",n)}a(void 0)})}}var c={data:function(){return{}},onLoad:function(){var t=n.getStorageSync("userInfo");console.log(i(t," at pages\\my\\login\\login.vue:19")),null!==t&&""!==t&&n.switchTab({url:"/pages/index/index/index"})},methods:{weixinLoginConfirm:function(){var n=a(r.default.mark(function n(t){var e;return r.default.wrap(function(n){while(1)switch(n.prev=n.next){case 0:return n.next=2,this.$util.request({requestUrl:"api/user/"+t.openId});case 2:e=n.sent,console.log(i("查询用户",e," at pages\\my\\login\\login.vue:31")),e&&(null===e.data.data?this.addUser(t):this.modifyUser(t));case 5:case"end":return n.stop()}},n,this)}));function t(t){return n.apply(this,arguments)}return t}(),addUser:function(){var n=a(r.default.mark(function n(t){var e;return r.default.wrap(function(n){while(1)switch(n.prev=n.next){case 0:return n.next=2,this.$util.request({requestUrl:"api/user",method:"POST",data:t});case 2:e=n.sent,console.log(i("注册",e," at pages\\my\\login\\login.vue:46")),e&&this.loginSucc(t);case 5:case"end":return n.stop()}},n,this)}));function t(t){return n.apply(this,arguments)}return t}(),loginSucc:function(t){n.hideLoading(),n.setStorageSync("userInfo",t),this.$util.toast("登录成功"),setTimeout(function(){n.switchTab({url:"/pages/index/index/index"})},500)},modifyUser:function(){var n=a(r.default.mark(function n(t){var e;return r.default.wrap(function(n){while(1)switch(n.prev=n.next){case 0:return n.next=2,this.$util.request({requestUrl:"api/user",method:"PUT",data:t});case 2:e=n.sent,console.log(i("登录",e," at pages\\my\\login\\login.vue:69")),e&&this.loginSucc(t);case 5:case"end":return n.stop()}},n,this)}));function t(t){return n.apply(this,arguments)}return t}(),weixinLogin:function(){var n={openId:"oRrdQt1PCt0pRj4hiGAAIyVoxZLs",nickName:"M.X",gender:1,city:"上饶",province:"江西",country:"中国",avatarUrl:"http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTI2bm5Hwiax0EoPVIViaUmFNzjMl1C63unGFoJ9Ol9VKllB1LibrZibGByQfWo2nqPIbF2LoNmK6w8meA/132",unionId:"oU5Yyty__tDp0m3-aq9VrgoSWw2Q"};this.weixinLoginConfirm(n)}}};t.default=c}).call(this,e("6e42")["default"],e("0de9")["default"])},e9db:function(n,t,e){"use strict";e.r(t);var i=e("ca60"),r=e.n(i);for(var u in i)"default"!==u&&function(n){e.d(t,n,function(){return i[n]})}(u);t["default"]=r.a}},[["188d","common/runtime","common/vendor"]]]);
 });
 require('pages/my/login/login.js');
+__wxRoute = 'pages/color/color/color';__wxRouteBegin = true;__wxAppCurrentFile__ = 'pages/color/color/color.js';
+
+define('pages/color/color/color.js',function(require, module, exports, window, document, frames, self, location, navigator, localStorage, history, Caches, screen, alert, confirm, prompt, fetch, XMLHttpRequest, WebSocket, webkit, WeixinJSCore, Reporter, print, WeixinJSBridge){
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/color/color/color"],{"03b5":function(t,e,n){"use strict";var r=n("a955"),a=n.n(r);a.a},1574:function(t,e,n){"use strict";n.r(e);var r=n("241e"),a=n.n(r);for(var u in r)"default"!==u&&function(t){n.d(e,t,function(){return r[t]})}(u);e["default"]=a.a},"241e":function(t,e,n){"use strict";(function(t,r){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var a=u(n("a34a"));function u(t){return t&&t.__esModule?t:{default:t}}function o(t,e,n,r,a,u,o){try{var i=t[u](o),c=i.value}catch(s){return void n(s)}i.done?e(c):Promise.resolve(c).then(r,a)}function i(t){return function(){var e=this,n=arguments;return new Promise(function(r,a){var u=t.apply(e,n);function i(t){o(u,r,a,i,c,"next",t)}function c(t){o(u,r,a,i,c,"throw",t)}i(void 0)})}}var c={data:function(){return{list:[],imageList:[]}},onLoad:function(){this.selectColors()},methods:{preview:function(e){t.previewImage({current:e,urls:this.imageList})},selectColors:function(){var t=i(a.default.mark(function t(){var e,n,u,o,i,c,s;return a.default.wrap(function(t){while(1)switch(t.prev=t.next){case 0:return t.next=2,this.$util.request({requestUrl:"api/colors"});case 2:if(e=t.sent,console.log(r("查询色板：",e," at pages\\color\\color\\color.vue:37")),!e){t.next=25;break}for(this.list=e.data.data,n=!0,u=!1,o=void 0,t.prev=9,i=this.list[Symbol.iterator]();!(n=(c=i.next()).done);n=!0)s=c.value,this.imageList.push(s.image);t.next=17;break;case 13:t.prev=13,t.t0=t["catch"](9),u=!0,o=t.t0;case 17:t.prev=17,t.prev=18,n||null==i.return||i.return();case 20:if(t.prev=20,!u){t.next=23;break}throw o;case 23:return t.finish(20);case 24:return t.finish(17);case 25:case"end":return t.stop()}},t,this,[[9,13,17,25],[18,,20,24]])}));function e(){return t.apply(this,arguments)}return e}()}};e.default=c}).call(this,n("6e42")["default"],n("0de9")["default"])},"5f66":function(t,e,n){"use strict";n.r(e);var r=n("abc0"),a=n("1574");for(var u in a)"default"!==u&&function(t){n.d(e,t,function(){return a[t]})}(u);n("03b5");var o=n("2877"),i=Object(o["a"])(a["default"],r["a"],r["b"],!1,null,"5fbc1311",null);e["default"]=i.exports},a955:function(t,e,n){},abc0:function(t,e,n){"use strict";var r=function(){var t=this,e=t.$createElement;t._self._c},a=[];n.d(e,"a",function(){return r}),n.d(e,"b",function(){return a})},d36d:function(t,e,n){"use strict";(function(t){n("d1f0"),n("921b");r(n("66fd"));var e=r(n("5f66"));function r(t){return t&&t.__esModule?t:{default:t}}t(e.default)}).call(this,n("6e42")["createPage"])}},[["d36d","common/runtime","common/vendor"]]]);
+});
+require('pages/color/color/color.js');
 __wxRoute = 'pages/category/category/category';__wxRouteBegin = true;__wxAppCurrentFile__ = 'pages/category/category/category.js';
 
 define('pages/category/category/category.js',function(require, module, exports, window, document, frames, self, location, navigator, localStorage, history, Caches, screen, alert, confirm, prompt, fetch, XMLHttpRequest, WebSocket, webkit, WeixinJSCore, Reporter, print, WeixinJSBridge){
-(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/category/category/category"],{"0fef":function(t,e,r){"use strict";var n=r("b2b2"),a=r.n(n);a.a},"1f2f":function(t,e,r){"use strict";(function(t){r("d1f0"),r("921b");n(r("66fd"));var e=n(r("c641"));function n(t){return t&&t.__esModule?t:{default:t}}t(e.default)}).call(this,r("6e42")["createPage"])},7470:function(t,e,r){"use strict";var n=function(){var t=this,e=t.$createElement;t._self._c},a=[];r.d(e,"a",function(){return n}),r.d(e,"b",function(){return a})},b2b2:function(t,e,r){},bfdc:function(t,e,r){"use strict";r.r(e);var n=r("f677"),a=r.n(n);for(var i in n)"default"!==i&&function(t){r.d(e,t,function(){return n[t]})}(i);e["default"]=a.a},c641:function(t,e,r){"use strict";r.r(e);var n=r("7470"),a=r("bfdc");for(var i in a)"default"!==i&&function(t){r.d(e,t,function(){return a[t]})}(i);r("0fef");var c=r("2877"),u=Object(c["a"])(a["default"],n["a"],n["b"],!1,null,"8844f26c",null);e["default"]=u.exports},f677:function(t,e,r){"use strict";(function(t,n){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var a=i(r("a34a"));function i(t){return t&&t.__esModule?t:{default:t}}function c(t,e,r,n,a,i,c){try{var u=t[i](c),o=u.value}catch(s){return void r(s)}u.done?e(o):Promise.resolve(o).then(n,a)}function u(t){return function(){var e=this,r=arguments;return new Promise(function(n,a){var i=t.apply(e,r);function u(t){c(i,n,a,u,o,"next",t)}function o(t){c(i,n,a,u,o,"throw",t)}u(void 0)})}}var o={data:function(){return{list:[],tabCur:0,mainCur:0,verticalNavTop:0}},onShow:function(){},onHide:function(){},onLoad:function(){var e=this;u(a.default.mark(function r(){var n,i,c,u,o,s;return a.default.wrap(function(r){while(1)switch(r.prev=r.next){case 0:return r.next=2,e.selectCategory();case 2:if(!(e.list.length>0)){r.next=30;break}n=!0,i=!1,c=void 0,r.prev=6,u=e.list[Symbol.iterator]();case 8:if(n=(o=u.next()).done){r.next=15;break}return s=o.value,r.next=12,e.selectProductsByCategory(s.id);case 12:n=!0,r.next=8;break;case 15:r.next=21;break;case 17:r.prev=17,r.t0=r["catch"](6),i=!0,c=r.t0;case 21:r.prev=21,r.prev=22,n||null==u.return||u.return();case 24:if(r.prev=24,!i){r.next=27;break}throw c;case 27:return r.finish(24);case 28:return r.finish(21);case 29:console.log(t(e.list," at pages\\category\\category\\category.vue:58"));case 30:case"end":return r.stop()}},r,this,[[6,17,21,29],[22,,24,28]])}))()},methods:{toDetail:function(t){this.$util.toProductDetail(t)},selectProductsByCategory:function(){var e=u(a.default.mark(function e(r){var n,i,c,u,o,s,l;return a.default.wrap(function(e){while(1)switch(e.prev=e.next){case 0:return e.next=2,this.$util.request({requestUrl:"api/productsByCategory/"+r});case 2:if(n=e.sent,console.log(t("某类下的商品：",n," at pages\\category\\category\\category.vue:70")),!n){e.next=24;break}for(i=!0,c=!1,u=void 0,e.prev=8,o=this.list[Symbol.iterator]();!(i=(s=o.next()).done);i=!0)l=s.value,l.id===r&&(l.arr=n.data.data);e.next=16;break;case 12:e.prev=12,e.t0=e["catch"](8),c=!0,u=e.t0;case 16:e.prev=16,e.prev=17,i||null==o.return||o.return();case 19:if(e.prev=19,!c){e.next=22;break}throw u;case 22:return e.finish(19);case 23:return e.finish(16);case 24:case"end":return e.stop()}},e,this,[[8,12,16,24],[17,,19,23]])}));function r(t){return e.apply(this,arguments)}return r}(),selectCategory:function(){var e=u(a.default.mark(function e(){var r,n,i,c,u,o,s;return a.default.wrap(function(e){while(1)switch(e.prev=e.next){case 0:return e.next=2,this.$util.request({requestUrl:"api/category"});case 2:if(r=e.sent,console.log(t("查询所有类别：",r," at pages\\category\\category\\category.vue:83")),!r){e.next=25;break}for(this.list=r.data.data,n=!0,i=!1,c=void 0,e.prev=9,u=this.list[Symbol.iterator]();!(n=(o=u.next()).done);n=!0)s=o.value,this.$set(s,"arr",[]);e.next=17;break;case 13:e.prev=13,e.t0=e["catch"](9),i=!0,c=e.t0;case 17:e.prev=17,e.prev=18,n||null==u.return||u.return();case 20:if(e.prev=20,!i){e.next=23;break}throw c;case 23:return e.finish(20);case 24:return e.finish(17);case 25:case"end":return e.stop()}},e,this,[[9,13,17,25],[18,,20,24]])}));function r(){return e.apply(this,arguments)}return r}(),TabSelect:function(t){this.tabCur=t.currentTarget.dataset.id,this.mainCur=t.currentTarget.dataset.id,this.verticalNavTop=50*(t.currentTarget.dataset.id-1)},VerticalMain:function(t){for(var e=this,r=0,a=function(t){var a=n.createSelectorQuery().select("#main-"+t);a.fields({size:!0},function(n){e.list[t].top=r,r+=n.height,e.list[t].bottom=r}).exec()},i=0;i<this.list.length;i++)a(i);var c=t.detail.scrollTop+10;for(i=0;i<this.list.length;i++)if(c>this.list[i].top&&c<this.list[i].bottom)return this.verticalNavTop=50*(this.list[i].id-1),this.tabCur=this.list[i].id,!1}}};e.default=o}).call(this,r("0de9")["default"],r("6e42")["default"])}},[["1f2f","common/runtime","common/vendor"]]]);
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/category/category/category"],{"02ea":function(t,e,r){"use strict";var n=r("f309"),a=r.n(n);a.a},"1f2f":function(t,e,r){"use strict";(function(t){r("d1f0"),r("921b");n(r("66fd"));var e=n(r("c641"));function n(t){return t&&t.__esModule?t:{default:t}}t(e.default)}).call(this,r("6e42")["createPage"])},bfdc:function(t,e,r){"use strict";r.r(e);var n=r("f677"),a=r.n(n);for(var i in n)"default"!==i&&function(t){r.d(e,t,function(){return n[t]})}(i);e["default"]=a.a},c641:function(t,e,r){"use strict";r.r(e);var n=r("e68f"),a=r("bfdc");for(var i in a)"default"!==i&&function(t){r.d(e,t,function(){return a[t]})}(i);r("02ea");var c=r("2877"),u=Object(c["a"])(a["default"],n["a"],n["b"],!1,null,"dec56e5c",null);e["default"]=u.exports},e68f:function(t,e,r){"use strict";var n=function(){var t=this,e=t.$createElement;t._self._c},a=[];r.d(e,"a",function(){return n}),r.d(e,"b",function(){return a})},f309:function(t,e,r){},f677:function(t,e,r){"use strict";(function(t,n){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var a=i(r("a34a"));function i(t){return t&&t.__esModule?t:{default:t}}function c(t,e,r,n,a,i,c){try{var u=t[i](c),o=u.value}catch(s){return void r(s)}u.done?e(o):Promise.resolve(o).then(n,a)}function u(t){return function(){var e=this,r=arguments;return new Promise(function(n,a){var i=t.apply(e,r);function u(t){c(i,n,a,u,o,"next",t)}function o(t){c(i,n,a,u,o,"throw",t)}u(void 0)})}}var o={data:function(){return{list:[],tabCur:0,mainCur:0,verticalNavTop:0}},onShow:function(){},onHide:function(){},onLoad:function(){var e=this;u(a.default.mark(function r(){var n,i,c,u,o,s;return a.default.wrap(function(r){while(1)switch(r.prev=r.next){case 0:return r.next=2,e.selectCategory();case 2:if(!(e.list.length>0)){r.next=30;break}n=!0,i=!1,c=void 0,r.prev=6,u=e.list[Symbol.iterator]();case 8:if(n=(o=u.next()).done){r.next=15;break}return s=o.value,r.next=12,e.selectProductsByCategory(s.id);case 12:n=!0,r.next=8;break;case 15:r.next=21;break;case 17:r.prev=17,r.t0=r["catch"](6),i=!0,c=r.t0;case 21:r.prev=21,r.prev=22,n||null==u.return||u.return();case 24:if(r.prev=24,!i){r.next=27;break}throw c;case 27:return r.finish(24);case 28:return r.finish(21);case 29:console.log(t(e.list," at pages\\category\\category\\category.vue:58"));case 30:case"end":return r.stop()}},r,this,[[6,17,21,29],[22,,24,28]])}))()},methods:{toDetail:function(t){this.$util.toProductDetail(t)},selectProductsByCategory:function(){var e=u(a.default.mark(function e(r){var n,i,c,u,o,s,l;return a.default.wrap(function(e){while(1)switch(e.prev=e.next){case 0:return e.next=2,this.$util.request({requestUrl:"api/productsByCategory/"+r});case 2:if(n=e.sent,console.log(t("某类下的商品：",n," at pages\\category\\category\\category.vue:70")),!n){e.next=24;break}for(i=!0,c=!1,u=void 0,e.prev=8,o=this.list[Symbol.iterator]();!(i=(s=o.next()).done);i=!0)l=s.value,l.id===r&&(l.arr=n.data.data);e.next=16;break;case 12:e.prev=12,e.t0=e["catch"](8),c=!0,u=e.t0;case 16:e.prev=16,e.prev=17,i||null==o.return||o.return();case 19:if(e.prev=19,!c){e.next=22;break}throw u;case 22:return e.finish(19);case 23:return e.finish(16);case 24:case"end":return e.stop()}},e,this,[[8,12,16,24],[17,,19,23]])}));function r(t){return e.apply(this,arguments)}return r}(),selectCategory:function(){var e=u(a.default.mark(function e(){var r,n,i,c,u,o,s;return a.default.wrap(function(e){while(1)switch(e.prev=e.next){case 0:return e.next=2,this.$util.request({requestUrl:"api/category"});case 2:if(r=e.sent,console.log(t("查询所有类别：",r," at pages\\category\\category\\category.vue:83")),!r){e.next=25;break}for(this.list=r.data.data,n=!0,i=!1,c=void 0,e.prev=9,u=this.list[Symbol.iterator]();!(n=(o=u.next()).done);n=!0)s=o.value,this.$set(s,"arr",[]);e.next=17;break;case 13:e.prev=13,e.t0=e["catch"](9),i=!0,c=e.t0;case 17:e.prev=17,e.prev=18,n||null==u.return||u.return();case 20:if(e.prev=20,!i){e.next=23;break}throw c;case 23:return e.finish(20);case 24:return e.finish(17);case 25:case"end":return e.stop()}},e,this,[[9,13,17,25],[18,,20,24]])}));function r(){return e.apply(this,arguments)}return r}(),TabSelect:function(t){this.tabCur=t.currentTarget.dataset.id,this.mainCur=t.currentTarget.dataset.id,this.verticalNavTop=50*(t.currentTarget.dataset.id-1)},VerticalMain:function(t){for(var e=this,r=0,a=function(t){var a=n.createSelectorQuery().select("#main-"+t);a.fields({size:!0},function(n){e.list[t].top=r,r+=n.height,e.list[t].bottom=r}).exec()},i=0;i<this.list.length;i++)a(i);var c=t.detail.scrollTop+10;for(i=0;i<this.list.length;i++)if(c>this.list[i].top&&c<this.list[i].bottom)return this.verticalNavTop=50*(this.list[i].id-1),this.tabCur=this.list[i].id,!1}}};e.default=o}).call(this,r("0de9")["default"],r("6e42")["default"])}},[["1f2f","common/runtime","common/vendor"]]]);
 });
 require('pages/category/category/category.js');
 __wxRoute = 'pages/my/my/my';__wxRouteBegin = true;__wxAppCurrentFile__ = 'pages/my/my/my.js';

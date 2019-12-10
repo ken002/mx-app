@@ -1,1 +1,1 @@
-<view></view>
+<view class="data-v-5a87b816"><block wx:for="{{items}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view class="text-xl padding data-v-5a87b816"><text class="data-v-5a87b816">{{item.intro}}</text></view></block></view>

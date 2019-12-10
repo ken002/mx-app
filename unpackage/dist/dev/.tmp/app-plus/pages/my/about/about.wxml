@@ -1,0 +1,1 @@
+<view class="data-v-6ba8f9f1"><view class="text-xl version data-v-6ba8f9f1"><text class="text-bold data-v-6ba8f9f1">{{"当前版本："+currVersion}}</text></view><view class="padding flex flex-direction data-v-6ba8f9f1"><button data-event-opts="{{[['tap',[['getNewVersion',['$event']]]]]}}" class="cu-btn bg-blue lg data-v-6ba8f9f1" bindtap="__e">检查更新</button></view></view>

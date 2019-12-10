@@ -33,4 +33,7 @@
 .avatar-container .nickname.data-v-192cccd5 {
     margin-top: 10px;
 }
+.items.data-v-192cccd5 {
+  padding-bottom: 70px;
+}
 

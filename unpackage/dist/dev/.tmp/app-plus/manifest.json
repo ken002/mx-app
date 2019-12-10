@@ -111,7 +111,13 @@
           "pagePath": "pages/index/index/index",
           "iconPath": "static/component.png",
           "selectedIconPath": "static/componentHL.png",
-          "text": "首页"
+          "text": "推荐"
+        },
+        {
+          "pagePath": "pages/color/color/color",
+          "iconPath": "static/extui.png",
+          "selectedIconPath": "static/extuiHL.png",
+          "text": "色板"
         },
         {
           "pagePath": "pages/category/category/category",

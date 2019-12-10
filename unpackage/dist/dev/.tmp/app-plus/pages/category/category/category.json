@@ -1,5 +1,6 @@
 {
   "navigationBarTitleText": "类别",
+  "enablePullDownRefresh": true,
   "usingComponents": {
     "image-cache": "/components/common/image-cache/image-cache",
     "video-play": "/components/current/video-play/video-play"

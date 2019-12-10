@@ -1,2 +1,2 @@
-setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"image-container.",[1],"data-v-9ea05e0a { height: 200px; }\n",],undefined,{path:"./pages/index/productDetail/productDetail.wxss"})();
+setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"image-container.",[1],"data-v-9ea05e0a { height: 200px; }\n.",[1],"padding.",[1],"data-v-9ea05e0a { padding: 20px; }\n",],undefined,{path:"./pages/index/productDetail/productDetail.wxss"})();
 document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/index/productDetail/productDetail.wxml') } }));

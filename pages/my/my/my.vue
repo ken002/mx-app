@@ -5,30 +5,25 @@
 			<view class="nickname">{{ userInfo.nickName }}</view>
 		</view>
 
-		<view class="cu-list menu sm-border card-menu">
-			<view @tap="toMyCollection" class="cu-item arrow">
-				<view class="content">
-					<text class="text-grey">我的收藏</text>
+		<view class="items">
+			<view class="cu-list menu sm-border card-menu">
+				<view @tap="toMyCollection" class="cu-item arrow">
+					<view class="content"><text class="text-grey">我的收藏</text></view>
 				</view>
-			</view>
-			<view @tap="toRecharge" class="cu-item arrow">
-				<view class="content">
-					<text class="text-grey">充值优惠</text>
+				<view @tap="toRecharge" class="cu-item arrow">
+					<view class="content"><text class="text-grey">充值优惠</text></view>
 				</view>
-			</view>
-			<view @tap="toPriceExplain" class="cu-item arrow">
-				<view class="content">
-					<text class="text-grey">价格说明</text>
+				<view @tap="toMoreResource" class="cu-item arrow">
+					<view class="content"><text class="text-grey">更多款式</text></view>
 				</view>
-			</view>
-			<view @tap="toFeedback" class="cu-item arrow">
-				<view class="content">
-					<text class="text-grey">反馈建议</text>
+				<view @tap="toAbout" class="cu-item arrow">
+					<view class="content"><text class="text-grey">关于</text></view>
 				</view>
-			</view>
-			<view @tap="out" class="cu-item arrow">
-				<view class="content">
-					<text class="text-grey">退出登录</text>
+				<view @tap="toManageSystem" class="cu-item arrow">
+					<view class="content"><text class="text-grey">后台管理</text></view>
+				</view>
+				<view @tap="out" class="cu-item arrow">
+					<view class="content"><text class="text-grey">退出登录</text></view>
 				</view>
 			</view>
 		</view>
@@ -42,39 +37,47 @@ export default {
 			userInfo: {}
 		};
 	},
+	onPullDownRefresh() {
+		setTimeout(() => {
+			uni.stopPullDownRefresh();
+		}, 500);
+	},
 	onLoad() {
 		this.userInfo = uni.getStorageSync('userInfo');
-		if(this.userInfo===null || this.userInfo===''){
+		if (this.userInfo === null || this.userInfo === '') {
 			uni.reLaunch({
 				url: '../login/login'
 			});
 		}
 	},
 	methods: {
-		toMyCollection(){
-			
+		toMoreResource() {
+			this.$util.navigateTo('../moreResource/moreResource');
 		},
-		toRecharge(){
-			
+		toManageSystem() {
+			this.$util.navigateTo('../manageSystem/manageSystem');
 		},
-		toPriceExplain(){
-			
+		toMyCollection() {
+			this.$util.navigateTo('../myCollection/myCollection');
 		},
-		toFeedback(){
-			
+		toRecharge() {
+			this.$util.navigateTo('../recharge/recharge');
+		},
+		toAbout() {
+			this.$util.navigateTo('../about/about');
 		},
 		out() {
 			uni.showModal({
-			    title: '提示',
-			    content: '确定要退出登录',
-			    success: function (res) {
-			        if (res.confirm) {
+				title: '提示',
+				content: '确定要退出登录',
+				success: function(res) {
+					if (res.confirm) {
 						uni.removeStorageSync('userInfo');
 						uni.reLaunch({
 							url: '../login/login'
 						});
-			        }
-			    }
+					}
+				}
 			});
 		}
 	}
@@ -92,5 +95,9 @@ export default {
 	.nickname {
 		margin-top: 10px;
 	}
+}
+
+.items {
+	padding-bottom: 70px;
 }
 </style>
