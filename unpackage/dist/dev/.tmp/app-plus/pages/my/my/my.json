@@ -1,5 +1,7 @@
 {
   "navigationBarTitleText": "我",
   "enablePullDownRefresh": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "chun-lei-modal": "/components/common/chunLei-modal/chunLei-modal"
+  }
 }

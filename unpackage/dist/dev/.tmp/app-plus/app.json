@@ -62,6 +62,7 @@
     "loading": "/components/common/loading/loading",
     "image-cache": "/components/common/image-cache/image-cache",
     "video-cache": "/components/current/video-cache/video-cache",
-    "video-play": "/components/current/video-play/video-play"
+    "video-play": "/components/current/video-play/video-play",
+    "chun-lei-modal": "/components/common/chunLei-modal/chunLei-modal"
   }
 }

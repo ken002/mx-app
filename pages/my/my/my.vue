@@ -29,6 +29,8 @@
 				</view>
 			</view>
 		</view>
+
+		<chunLei-modal v-model="value" :mData="inputData" :type="'input'" @onConfirm="onConfirm" @cancel="cancel" :navMask="false"></chunLei-modal>
 	</view>
 </template>
 
@@ -36,7 +38,14 @@
 export default {
 	data() {
 		return {
-			userInfo: {}
+			userInfo: {},
+			value: false,
+			inputData: {
+				title: '密码',
+				content: [
+					{ title: '', content: '', type: 'password', placeholder: '请输入平板密码' }
+				]
+			}
 		};
 	},
 	onPullDownRefresh() {
@@ -53,11 +62,24 @@ export default {
 		}
 	},
 	methods: {
+		onConfirm(e) {
+			if(e[0].content==='112025'){
+				this.value=false;
+				this.$util.navigateTo('../manageSystem/manageSystem');
+			}else{
+				this.inputData.content[0].content='';
+				this.$util.toast('密码不正确');
+			}
+		},
+		cancel() {
+			this.value=false;
+		},
 		toMoreResource() {
 			this.$util.navigateTo('../moreResource/moreResource');
 		},
 		toManageSystem() {
-			this.$util.navigateTo('../manageSystem/manageSystem');
+			this.inputData.content[0].content='';
+			this.value=true;
 		},
 		toMyCollection() {
 			this.$util.navigateTo('../myCollection/myCollection');

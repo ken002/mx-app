@@ -24,16 +24,16 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.avatar-container.data-v-d0fe157e {
+.avatar-container.data-v-8514c55c {
   padding: 50px 0;
   background: #fff;
   text-align: center;
   margin-bottom: 30px;
 }
-.avatar-container .nickname.data-v-d0fe157e {
+.avatar-container .nickname.data-v-8514c55c {
     margin-top: 10px;
 }
-.items.data-v-d0fe157e {
+.items.data-v-8514c55c {
   padding-bottom: 70px;
 }
 
