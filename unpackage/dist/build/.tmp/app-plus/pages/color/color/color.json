@@ -1,5 +1,6 @@
 {
   "navigationBarTitleText": "色板",
+  "enablePullDownRefresh": true,
   "usingComponents": {
     "image-cache": "/components/common/image-cache/image-cache"
   }

@@ -7,10 +7,11 @@
     "pages/my/my/my",
     "pages/index/productList/productList",
     "pages/my/recharge/recharge",
-    "pages/my/priceExplain/priceExplain",
-    "pages/my/feedback/feedback",
     "pages/my/myCollection/myCollection",
-    "pages/index/productDetail/productDetail"
+    "pages/index/productDetail/productDetail",
+    "pages/my/about/about",
+    "pages/my/manageSystem/manageSystem",
+    "pages/my/moreResource/moreResource"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -27,7 +28,7 @@
         "pagePath": "pages/index/index/index",
         "iconPath": "static/component.png",
         "selectedIconPath": "static/componentHL.png",
-        "text": "首页"
+        "text": "推荐"
       },
       {
         "pagePath": "pages/color/color/color",
@@ -56,7 +57,7 @@
     "autoclose": false
   },
   "appname": "MX美甲",
-  "compilerVersion": "2.4.2",
+  "compilerVersion": "2.4.6",
   "usingComponents": {
     "loading": "/components/common/loading/loading",
     "image-cache": "/components/common/image-cache/image-cache",

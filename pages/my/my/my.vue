@@ -16,9 +16,11 @@
 				<view @tap="toMoreResource" class="cu-item arrow">
 					<view class="content"><text class="text-grey">更多款式</text></view>
 				</view>
+				<!-- #ifdef APP-PLUS -->
 				<view @tap="toAbout" class="cu-item arrow">
 					<view class="content"><text class="text-grey">关于</text></view>
 				</view>
+				<!-- #endif -->
 				<view @tap="toManageSystem" class="cu-item arrow">
 					<view class="content"><text class="text-grey">后台管理</text></view>
 				</view>

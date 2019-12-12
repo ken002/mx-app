@@ -7,4 +7,4 @@
         })
     },
     [['components/common/image-cache/image-cache-create-component']]
-]);                
+]);

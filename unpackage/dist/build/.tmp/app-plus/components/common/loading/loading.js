@@ -7,4 +7,4 @@
         })
     },
     [['components/common/loading/loading-create-component']]
-]);                
+]);

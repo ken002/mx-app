@@ -57,7 +57,7 @@
     "autoclose": false
   },
   "appname": "MX美甲",
-  "compilerVersion": "2.4.2",
+  "compilerVersion": "2.4.6",
   "usingComponents": {
     "loading": "/components/common/loading/loading",
     "image-cache": "/components/common/image-cache/image-cache",

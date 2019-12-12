@@ -27,7 +27,7 @@
 .flow-box.data-v-bbbe6d14 {
   position: relative;
   color: #1a1a1a;
-  padding-bottom: 0px;
+  padding-bottom: var(--window-bottom);
 }
 .flow-box .item.data-v-bbbe6d14 {
   position: absolute;
@@ -46,14 +46,11 @@
   padding: 20rpx;
   display: -webkit-box;
   display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
           flex-wrap: wrap;
 }
 .flow-box .content text.data-v-bbbe6d14 {
@@ -64,7 +61,6 @@
 .flow-box .user.data-v-bbbe6d14 {
   display: -webkit-box;
   display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   width: 220rpx;
   overflow: hidden;

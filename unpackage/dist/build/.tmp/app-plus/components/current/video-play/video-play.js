@@ -7,4 +7,4 @@
         })
     },
     [['components/current/video-play/video-play-create-component']]
-]);                
+]);

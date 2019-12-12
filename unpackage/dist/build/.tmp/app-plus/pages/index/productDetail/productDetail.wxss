@@ -24,7 +24,10 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.image-container.data-v-1a93b4d8 {
+.image-container.data-v-6086acb9 {
   height: 200px;
+}
+.padding.data-v-6086acb9 {
+  padding: 20px;
 }
 

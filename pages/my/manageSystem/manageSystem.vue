@@ -9,7 +9,9 @@
 		data() {
 			return {
 				webviewStyles:{
-					progress:true
+					progress:{
+						color:'007AFF'
+					}
 				}
 			}
 		},

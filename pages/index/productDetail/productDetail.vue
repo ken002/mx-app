@@ -8,7 +8,6 @@
 			<view>{{productDetail.name}}</view>
 			<view>{{productDetail.intro}}</view>
 		</view>
-		<view class="padding flex flex-direction"><button @tap="addCollection" class="cu-btn bg-blue lg">添加到我的收藏</button></view>
 	</view>
 </template>
 
@@ -24,9 +23,6 @@ export default {
 		this.productDetail = params.productDetail;
 	},
 	methods: {
-		addCollection(){
-			
-		},
 		toPreview(){
 			uni.previewImage({
 				current: this.productDetail.image,

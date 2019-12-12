@@ -38,14 +38,11 @@
 .sample-show.data-v-1faef842 {
   display: -webkit-box;
   display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
-      -ms-flex-align: start;
           align-items: flex-start;
 }
 .sample-show .item.data-v-1faef842 {

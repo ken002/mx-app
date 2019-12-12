@@ -55,7 +55,6 @@
 .color-item .cardTitle .text.data-v-73d963d2 {
       font-size: 40rpx;
       -webkit-transform: skew(-30deg, 0deg);
-          -ms-transform: skew(-30deg, 0deg);
               transform: skew(-30deg, 0deg);
 }
 

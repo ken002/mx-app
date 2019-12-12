@@ -1,2 +1,2 @@
-setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"flow-container.",[1],"data-v-dda68958 { padding-top: 15px; }\n",],undefined,{path:"./pages/index/productList/productList.wxss"})();
+setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"flow-container.",[1],"data-v-23299a1e { padding-top: 15px; }\n",],undefined,{path:"./pages/index/productList/productList.wxss"})();
 document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/index/productList/productList.wxml') } }));

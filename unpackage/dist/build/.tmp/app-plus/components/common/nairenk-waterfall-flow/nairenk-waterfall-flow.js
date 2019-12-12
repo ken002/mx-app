@@ -7,4 +7,4 @@
         })
     },
     [['components/common/nairenk-waterfall-flow/nairenk-waterfall-flow-create-component']]
-]);                
+]);

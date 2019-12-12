@@ -7,4 +7,4 @@
         })
     },
     [['components/current/video-cache/video-cache-create-component']]
-]);                
+]);
