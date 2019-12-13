@@ -70,6 +70,14 @@
 				"navigationBarTitleText": "更多美甲款式"
 			}
         }
+        ,{
+            "path" : "pages/my/register/register",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/my/retrievePassword/retrievePassword",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

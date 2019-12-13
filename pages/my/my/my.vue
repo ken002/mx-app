@@ -67,12 +67,12 @@ export default {
 				this.value=false;
 				this.$util.navigateTo('../manageSystem/manageSystem');
 			}else{
-				this.inputData.content[0].content='';
 				this.$util.toast('密码不正确');
+				this.inputData.content[0].content='';
 			}
 		},
 		cancel() {
-			this.value=false;
+			
 		},
 		toMoreResource() {
 			this.$util.navigateTo('../moreResource/moreResource');

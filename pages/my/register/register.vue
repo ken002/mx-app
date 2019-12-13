@@ -6,22 +6,21 @@
 		
 		<view class="list">
 			<view class="list-call">
-				<input class="biaoti" v-model="account" maxlength="20" type="text" placeholder="输入账号" />
+				<input class="biaoti" v-model="account" type="text" maxlength="20" placeholder="输入账号,务必记住该账号" />
 			</view>
 			<view class="list-call">
-				<input class="biaoti" v-model="password" type="password" maxlength="20" placeholder="输入密码" password="true" />
+				<input class="biaoti" v-model="question" type="text" maxlength="20" placeholder="请输入你的小学班主任姓名" />
 			</view>
-			
+			<view class="list-call">
+				<input class="biaoti" v-model="password" type="password" maxlength="20" placeholder="登录密码" />
+			</view>
+			<view class="list-call">
+				<input class="biaoti" v-model="passwordAgain" type="password" maxlength="20" placeholder="再次输入密码" />
+			</view>
 		</view>
 		
-		<view class="dlbutton" hover-class="dlbutton-hover" @tap="bindLogin()">
-			<text>登录</text>
-		</view>
-		
-		<view class="xieyi">
-			<navigator url="../retrievePassword/retrievePassword" open-type="navigate">忘记密码</navigator>
-			<text>|</text>
-			<navigator url="../register/register" open-type="navigate">注册账号</navigator>
+		<view class="dlbutton" hover-class="dlbutton-hover" @tap="bindRegister">
+			<text>注册</text>
 		</view>
 	</view>
 </template>
@@ -29,38 +28,53 @@
 <script>
 	export default {
 		onLoad(){
-			
 		},
 		data() {
 			return {
 				account:'',
-				password:''
+				password:'',
+				passwordAgain:'',
+				question:'',
 			};
 		},
 		methods: {
-			bindLogin(){
+			bindRegister(){
 				if(this.account===''){
 					this.$util.toast('请输入账号');
+					return;
+				}
+				if(this.question===''){
+					this.$util.toast('请回答密保问题');
 					return;
 				}
 				if(this.password===''){
 					this.$util.toast('请输入密码');
 					return;
 				}
+				if(this.passwordAgain===''){
+					this.$util.toast('请再次输入密码');
+					return;
+				}
+				if(this.password!==this.passwordAgain){
+					this.$util.toast('两次密码输入不一致');
+					return;
+				}
 				
-				this.login();
+				this.register();
 			},
-			async login(){
+			async register(){
 				const res = await this.$util.request({
-					requestUrl: 'api/userByAccountAndPass',
+					requestUrl: 'api/user',
+					method: 'POST',
 					data:{
 						account:this.account,
-						password:this.password
+						password:this.password,
+						question:this.question
 					}
 				});
-				console.log('登录', res);
+				console.log('注册', res);
 				if(res){
-					this.$util.toast('登录成功');
+					this.$util.toast('注册成功');
 				}
 			}
 		}
@@ -76,7 +90,7 @@
 	.header {
 		width:161upx;
 		height:161upx;
-		/* background:rgba(63,205,235,1); */
+		// background:rgba(63,205,235,1);
 		box-shadow:0upx 12upx 13upx 0upx rgba(63,205,235,0.47);
 		border-radius:50%;
 		margin-top: 30upx;
@@ -116,7 +130,21 @@
 		line-height: 100upx;
 		margin-left: 16upx;
 	}
-
+	.yzm {
+		color: #FF7D13;
+		font-size: 24upx;
+		line-height: 64upx;
+		padding-left: 10upx;
+		padding-right: 10upx;
+		width:auto;
+		height:64upx;
+		border:1upx solid #FFA800;
+		border-radius: 50upx;
+	}
+	.yzms {
+		color: #999999 !important;
+		border:1upx solid #999999;
+	}
 	.dlbutton {
 		color: #FFFFFF;
 		font-size: 34upx;
@@ -146,9 +174,8 @@
 		height: 40upx;
 		line-height: 40upx;
 	}
-	.xieyi text{
-		font-size: 24upx;
-		margin-left: 15upx;
-		margin-right: 15upx;
+	.xieyi image{
+		width: 40upx;
+		height: 40upx;
 	}
 </style>

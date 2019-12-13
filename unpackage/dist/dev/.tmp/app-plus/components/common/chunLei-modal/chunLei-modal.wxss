@@ -90,7 +90,7 @@
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
             flex-direction: row;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #f3f3f3;
 }
 .default-view .btn .cancel {
       display: -webkit-box;
@@ -105,7 +105,7 @@
       -webkit-box-align: center;
       -webkit-align-items: center;
               align-items: center;
-      border-right: 1px solid #ccc;
+      border-right: 1px solid #f3f3f3;
 }
 .default-view .btn .confirm {
       display: -webkit-box;
@@ -149,7 +149,7 @@
       color: #aaa;
       font-size: 12px;
 }
-.select-view image {
+.select-view .image {
     display: inline-block;
     vertical-align: middle;
     width: 40rpx;
@@ -164,7 +164,7 @@
   background-color: #fff;
   border-radius: 6rpx;
 }
-.notify-view image {
+.notify-view .image {
     width: 600rpx;
     height: 150rpx;
 }
@@ -260,7 +260,7 @@
     width: 33.33%;
     padding: 40rpx 0;
 }
-.share-view image {
+.share-view .image {
     width: 80rpx;
     height: 80rpx;
     margin-bottom: 20rpx;
@@ -297,11 +297,11 @@
     display: flex;
     margin-bottom: 20rpx;
 }
-.input-view .input-box view {
+.input-view .input-box .view {
       margin-right: 20rpx;
       min-width: 150rpx;
 }
-.input-view .input-box input {
+.input-view .input-box .input {
       width: 100%;
 }
 .input-view .btn {
