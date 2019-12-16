@@ -72,6 +72,9 @@
 				});
 				if(res){
 					this.$util.toast('修改成功');
+					setTimeout(() => {
+						uni.navigateBack();
+					}, 500);
 				}
 			}
 		}

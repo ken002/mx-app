@@ -11,7 +11,10 @@
     "pages/index/productDetail/productDetail",
     "pages/my/about/about",
     "pages/my/manageSystem/manageSystem",
-    "pages/my/moreResource/moreResource"
+    "pages/my/moreResource/moreResource",
+    "pages/my/register/register",
+    "pages/my/retrievePassword/retrievePassword",
+    "pages/my/personalInfo/personalInfo"
   ],
   "window": {
     "navigationBarTextStyle": "black",

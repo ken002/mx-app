@@ -72,11 +72,21 @@
         }
         ,{
             "path" : "pages/my/register/register",
-            "style" : {}
+            "style" : {
+				"navigationBarTitleText": "注册"
+			}
         }
         ,{
             "path" : "pages/my/retrievePassword/retrievePassword",
-            "style" : {}
+            "style" : {
+				"navigationBarTitleText": "找回密码"
+			}
+        }
+        ,{
+            "path" : "pages/my/personalInfo/personalInfo",
+            "style" : {
+				"navigationBarTitleText": "我的信息"
+			}
         }
     ],
 	"globalStyle": {

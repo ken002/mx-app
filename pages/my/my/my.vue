@@ -1,8 +1,8 @@
 <template>
 	<view>
-		<view class="avatar-container">
-			<view class="cu-avatar xl round" :style="{ 'background-image': 'url(' + userInfo.avatarUrl + ')' }"></view>
-			<view class="nickname">{{ userInfo.nickName }}</view>
+		<view @tap="toPersonalInfo" class="avatar-container">
+			<view class="cu-avatar xl round" :style="{ 'background-image': 'url(' + userInfo.avatar + ')' }"></view>
+			<view class="nickname">{{ userInfo.account }}</view>
 		</view>
 
 		<view class="items">
@@ -22,7 +22,10 @@
 				</view>
 				<!-- #endif -->
 				<view @tap="toManageSystem" class="cu-item arrow">
-					<view class="content"><text class="text-grey">后台管理</text></view>
+					<view class="content"><text class="text-grey">后台管理（管理员专用）</text></view>
+				</view>
+				<view @tap="toChatUs" class="cu-item arrow">
+					<view class="content"><text class="text-grey">联系店主</text></view>
 				</view>
 				<view @tap="out" class="cu-item arrow">
 					<view class="content"><text class="text-grey">退出登录</text></view>
@@ -43,7 +46,7 @@ export default {
 			inputData: {
 				title: '密码',
 				content: [
-					{ title: '', content: '', type: 'password', placeholder: '请输入平板密码' }
+					{ title: '', content: '', type: 'password', placeholder: '请输入米雪的平板密码' }
 				]
 			}
 		};
@@ -73,6 +76,14 @@ export default {
 		},
 		cancel() {
 			
+		},
+		toPersonalInfo(){
+			this.$util.navigateTo('../personalInfo/personalInfo');
+		},
+		toChatUs(){
+			uni.makePhoneCall({
+			    phoneNumber: '15180699664'
+			});
 		},
 		toMoreResource() {
 			this.$util.navigateTo('../moreResource/moreResource');

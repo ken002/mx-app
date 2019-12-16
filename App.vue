@@ -33,7 +33,7 @@ export default {
 				if (res.data.data[0].length === 1) {
 					const newVersionObj = res.data.data[0][0];
 					
-					if (currVersion < newVersionObj.appVersion) {
+					if (Number(currVersion) < newVersionObj.appVersion) {
 						if (newVersionObj.allUpdate===1) {
 							uni.showModal({
 								title: '升级',

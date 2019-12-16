@@ -75,6 +75,9 @@
 				console.log('注册', res);
 				if(res){
 					this.$util.toast('注册成功');
+					setTimeout(() => {
+						uni.navigateBack();
+					}, 500);
 				}
 			}
 		}
