@@ -65,10 +65,9 @@
 					this.$util.toast('登录成功');
 					
 					setTimeout(() => {
-						uni.switchTab({
-							url: '/pages/index/index/index'
-						});
+						uni.navigateBack();
 					}, 500);
+					
 				}
 			}
 		}

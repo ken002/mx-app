@@ -45,9 +45,7 @@ export default {
 			value: false,
 			inputData: {
 				title: '密码',
-				content: [
-					{ title: '', content: '', type: 'password', placeholder: '请输入米雪的平板密码' }
-				]
+				content: [{ title: '', content: '', type: 'password', placeholder: '请输入米雪的平板密码' }]
 			}
 		};
 	},
@@ -56,41 +54,40 @@ export default {
 			uni.stopPullDownRefresh();
 		}, 500);
 	},
-	onLoad() {
+	onShow() {
 		this.userInfo = uni.getStorageSync('userInfo');
 		if (this.userInfo === null || this.userInfo === '') {
-			uni.reLaunch({
-				url: '../login/login'
-			});
+			this.$util.toLogin();
 		}
+	},
+	onLoad() {
+		
 	},
 	methods: {
 		onConfirm(e) {
-			if(e[0].content==='112025'){
-				this.value=false;
+			if (e[0].content === '112025') {
+				this.value = false;
 				this.$util.navigateTo('../manageSystem/manageSystem');
-			}else{
+			} else {
 				this.$util.toast('密码不正确');
-				this.inputData.content[0].content='';
+				this.inputData.content[0].content = '';
 			}
 		},
-		cancel() {
-			
-		},
-		toPersonalInfo(){
+		cancel() {},
+		toPersonalInfo() {
 			this.$util.navigateTo('../personalInfo/personalInfo');
 		},
-		toChatUs(){
+		toChatUs() {
 			uni.makePhoneCall({
-			    phoneNumber: '15180699664'
+				phoneNumber: '15180699664'
 			});
 		},
 		toMoreResource() {
 			this.$util.navigateTo('../moreResource/moreResource');
 		},
 		toManageSystem() {
-			this.inputData.content[0].content='';
-			this.value=true;
+			this.inputData.content[0].content = '';
+			this.value = true;
 		},
 		toMyCollection() {
 			this.$util.navigateTo('../myCollection/myCollection');
@@ -105,12 +102,10 @@ export default {
 			uni.showModal({
 				title: '提示',
 				content: '确定要退出登录',
-				success: function(res) {
+				success: (res)=>{
 					if (res.confirm) {
 						uni.removeStorageSync('userInfo');
-						uni.reLaunch({
-							url: '../login/login'
-						});
+						this.$util.toLogin();
 					}
 				}
 			});

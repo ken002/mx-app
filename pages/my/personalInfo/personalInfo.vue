@@ -27,13 +27,24 @@
 		},
 		methods: {
 			async uploadImage() {
-				// const path = await this.$util.selectImage();
-				// const backPath = await this.$util.uploadImage(path);
-				// this.userInfo.avatar = backPath;
-				// this.toModifyAvatar();
+				const path = await this.$util.selectImage();
+				const backPath = await this.$util.uploadImage(path);
+				this.userInfo.avatar = backPath;
+				this.toModifyAvatar();
 			},
 			async toModifyAvatar(){
-				
+				const res = await this.$util.request({
+					requestUrl: 'api/user',
+					method: 'PUT',
+					data:{
+						id:this.userInfo.id,
+						avatar:this.userInfo.avatar
+					}
+				});
+				if(res){
+					uni.setStorageSync('userInfo', this.userInfo);
+					this.$util.toast('修改成功');
+				}
 			}
 		}
 	}
