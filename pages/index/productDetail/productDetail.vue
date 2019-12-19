@@ -50,6 +50,7 @@ export default {
 					productId:this.productDetail.id
 				}
 			});
+			console.log('是否已收藏:',res);
 			if(res){
 				if(res.data.data.length===1){
 					this.collected=true;
@@ -78,6 +79,7 @@ export default {
 							productId:this.productDetail.id
 						}
 					});
+					console.log('收藏:',res);
 					if(res){
 						this.$util.toast('收藏成功');
 						this.collected=true;
@@ -88,6 +90,7 @@ export default {
 						requestUrl: `api/collection/${this.collection.id}`,
 						method: 'DELETE',
 					});
+					console.log('取消收藏:',res);
 					if(res){
 						this.$util.toast('已从收藏中移除');
 						this.collected=false;

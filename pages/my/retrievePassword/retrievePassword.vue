@@ -70,6 +70,7 @@
 						question:this.question
 					}
 				});
+				console.log('找回密码:', res);
 				if(res){
 					this.$util.toast('修改成功');
 					setTimeout(() => {

@@ -1,2 +1,0 @@
-setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"padding.",[1],"data-v-5a87b816 { padding: 10px 30px; }\n",],undefined,{path:"./pages/my/recharge/recharge.wxss"})();
-document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/my/recharge/recharge.wxml') } }));

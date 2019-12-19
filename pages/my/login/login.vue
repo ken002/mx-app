@@ -58,7 +58,7 @@
 						password:this.password
 					}
 				});
-				console.log('登录', res);
+				console.log('登录:', res);
 				if(res){
 					uni.setStorageSync('userInfo', res.data.data);
 					

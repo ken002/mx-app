@@ -1,1 +1,1 @@
-<view></view>
+<view class="data-v-22fb66d5"><view class="flow-container data-v-22fb66d5"><waterfall-flow vue-id="1" list="{{list}}" loading="{{false}}" data-event-opts="{{[['^click',[['choose']]]]}}" bind:click="__e" class="data-v-22fb66d5" bind:__l="__l"></waterfall-flow></view></view>

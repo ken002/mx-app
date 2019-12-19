@@ -1,2 +1,0 @@
-setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"version.",[1],"data-v-6ba8f9f1 { padding: 30px; text-align: center; }\n",],undefined,{path:"./pages/my/about/about.wxss"})();
-document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/my/about/about.wxml') } }));

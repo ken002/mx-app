@@ -1,2 +1,0 @@
-setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"avatar-container.",[1],"data-v-192cccd5 { padding: 50px 0; background: #fff; text-align: center; margin-bottom: 30px; }\n.",[1],"avatar-container .",[1],"nickname.",[1],"data-v-192cccd5 { margin-top: 10px; }\n.",[1],"items.",[1],"data-v-192cccd5 { padding-bottom: 70px; }\n",],undefined,{path:"./pages/my/my/my.wxss"})();
-document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/my/my/my.wxml') } }));

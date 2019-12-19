@@ -13,19 +13,20 @@
 				<view @tap="toRecharge" class="cu-item arrow">
 					<view class="content"><text class="text-grey">充值优惠</text></view>
 				</view>
-				<view @tap="toMoreResource" class="cu-item arrow">
-					<view class="content"><text class="text-grey">更多款式</text></view>
-				</view>
-				<!-- #ifdef APP-PLUS -->
-				<view @tap="toAbout" class="cu-item arrow">
-					<view class="content"><text class="text-grey">关于</text></view>
-				</view>
-				<!-- #endif -->
-				<view @tap="toManageSystem" class="cu-item arrow">
-					<view class="content"><text class="text-grey">后台管理（管理员专用）</text></view>
+				<view @tap="toNavigation" class="cu-item arrow">
+					<view class="content"><text class="text-grey">导航（到303广场后电话联系店主）</text></view>
 				</view>
 				<view @tap="toChatUs" class="cu-item arrow">
 					<view class="content"><text class="text-grey">联系店主</text></view>
+				</view>
+				<view @tap="toMoreResource" class="cu-item arrow">
+					<view class="content"><text class="text-grey">更多款式</text></view>
+				</view>
+				<view @tap="toManageSystem" class="cu-item arrow">
+					<view class="content"><text class="text-grey">后台管理（管理员专用）</text></view>
+				</view>
+				<view @tap="toAbout" class="cu-item arrow">
+					<view class="content"><text class="text-grey">关于</text></view>
 				</view>
 				<view @tap="out" class="cu-item arrow">
 					<view class="content"><text class="text-grey">退出登录</text></view>
@@ -60,9 +61,7 @@ export default {
 			this.$util.toLogin();
 		}
 	},
-	onLoad() {
-		
-	},
+	onLoad() {},
 	methods: {
 		onConfirm(e) {
 			if (e[0].content === '112025') {
@@ -74,6 +73,17 @@ export default {
 			}
 		},
 		cancel() {},
+		toNavigation() {
+			//#ifdef APP-PLUS
+			var dst = new plus.maps.Point(null, null);
+			var src = new plus.maps.Point(null, null);
+			plus.maps.openSysMap(dst, '303生活广场', src);
+			//#endif
+			
+			//#ifndef APP-PLUS
+				this.$util.toast('仅app端可用');
+			//#endif
+		},
 		toPersonalInfo() {
 			this.$util.navigateTo('../personalInfo/personalInfo');
 		},
@@ -96,13 +106,19 @@ export default {
 			this.$util.navigateTo('../recharge/recharge');
 		},
 		toAbout() {
+			//#ifdef APP-PLUS
 			this.$util.navigateTo('../about/about');
+			//#endif
+			
+			//#ifndef APP-PLUS
+			this.$util.toast('仅app端可用');
+			//#endif
 		},
 		out() {
 			uni.showModal({
 				title: '提示',
 				content: '确定要退出登录',
-				success: (res)=>{
+				success: res => {
 					if (res.confirm) {
 						uni.removeStorageSync('userInfo');
 						this.$util.toLogin();
