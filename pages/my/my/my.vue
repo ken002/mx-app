@@ -13,17 +13,22 @@
 				<view @tap="toRecharge" class="cu-item arrow">
 					<view class="content"><text class="text-grey">充值优惠</text></view>
 				</view>
+				<!-- #ifdef APP-PLUS -->
 				<view @tap="toNavigation" class="cu-item arrow">
 					<view class="content"><text class="text-grey">导航（到303广场后电话联系店主）</text></view>
 				</view>
+				<!-- #endif -->
+				<view @tap="toChatUsWeixin" class="cu-item arrow">
+					<view class="content"><text class="text-grey">添加店主微信</text></view>
+				</view>
 				<view @tap="toChatUs" class="cu-item arrow">
-					<view class="content"><text class="text-grey">联系店主</text></view>
+					<view class="content"><text class="text-grey">紧急联系店主</text></view>
 				</view>
 				<view @tap="toMoreResource" class="cu-item arrow">
 					<view class="content"><text class="text-grey">更多款式</text></view>
 				</view>
-				<view @tap="toManageSystem" class="cu-item arrow">
-					<view class="content"><text class="text-grey">后台管理（管理员专用）</text></view>
+				<view v-if="userInfo.isManager" @tap="toManageSystem" class="cu-item arrow">
+					<view class="content"><text class="text-grey">后台管理</text></view>
 				</view>
 				<view @tap="toAbout" class="cu-item arrow">
 					<view class="content"><text class="text-grey">关于</text></view>
@@ -33,8 +38,6 @@
 				</view>
 			</view>
 		</view>
-
-		<chunLei-modal v-model="value" :mData="inputData" :type="'input'" @onConfirm="onConfirm" @cancel="cancel" :navMask="false"></chunLei-modal>
 	</view>
 </template>
 
@@ -43,11 +46,6 @@ export default {
 	data() {
 		return {
 			userInfo: {},
-			value: false,
-			inputData: {
-				title: '密码',
-				content: [{ title: '', content: '', type: 'password', placeholder: '请输入米雪的平板密码' }]
-			}
 		};
 	},
 	onPullDownRefresh() {
@@ -63,16 +61,6 @@ export default {
 	},
 	onLoad() {},
 	methods: {
-		onConfirm(e) {
-			if (e[0].content === '112025') {
-				this.value = false;
-				this.$util.navigateTo('../manageSystem/manageSystem');
-			} else {
-				this.$util.toast('密码不正确');
-				this.inputData.content[0].content = '';
-			}
-		},
-		cancel() {},
 		toNavigation() {
 			//#ifdef APP-PLUS
 			var dst = new plus.maps.Point(null, null);
@@ -92,12 +80,14 @@ export default {
 				phoneNumber: '15180699664'
 			});
 		},
+		toChatUsWeixin(){
+			this.$util.navigateTo('../masterWeixin/masterWeixin');
+		},
 		toMoreResource() {
 			this.$util.navigateTo('../moreResource/moreResource');
 		},
 		toManageSystem() {
-			this.inputData.content[0].content = '';
-			this.value = true;
+			this.$util.navigateTo('../manageSystem/manageSystem');
 		},
 		toMyCollection() {
 			this.$util.navigateTo('../myCollection/myCollection');
@@ -106,13 +96,7 @@ export default {
 			this.$util.navigateTo('../recharge/recharge');
 		},
 		toAbout() {
-			//#ifdef APP-PLUS
 			this.$util.navigateTo('../about/about');
-			//#endif
-			
-			//#ifndef APP-PLUS
-			this.$util.toast('仅app端可用');
-			//#endif
 		},
 		out() {
 			uni.showModal({
@@ -144,6 +128,6 @@ export default {
 }
 
 .items {
-	padding-bottom: 70px;
+	padding-bottom: 60px;
 }
 </style>

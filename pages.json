@@ -88,6 +88,12 @@
 				"navigationBarTitleText": "我的信息"
 			}
         }
+        ,{
+            "path" : "pages/my/masterWeixin/masterWeixin",
+            "style" : {
+				"navigationBarTitleText": "加微信"
+			}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

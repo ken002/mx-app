@@ -9,6 +9,7 @@
 			</swiper>
 		</view>
 		<swiper
+			style="padding-top: 40px;box-sizing: content-box;"
 			class="card-swiper"
 			:class="dotStyle ? 'square-dot' : 'round-dot'"
 			:indicator-dots="true"
@@ -48,7 +49,7 @@
 				</view>
 			</view>
 		</view>
-		<view class="waterfall-flow-view">
+		<view style="margin-bottom: 60px;" class="waterfall-flow-view">
 			<view class="cu-bar bg-white solid-bottom">
 				<view class="action">
 					<text class="cuIcon-titles text-orange"></text>
@@ -89,12 +90,8 @@ export default {
 			msg: []
 		};
 	},
-	onShow() {
-		
-	},
-	onHide(){
-		
-	},
+	onShow() {},
+	onHide() {},
 	onLoad() {
 		this.selectNotice();
 		this.selectAd();
@@ -120,7 +117,7 @@ export default {
 				urls: urls
 			});
 		},
-		toDetail(item){
+		toDetail(item) {
 			this.$util.toProductDetail(item);
 		},
 		toMore(type) {
@@ -151,7 +148,7 @@ export default {
 			console.log('广告：', res);
 			if (res) {
 				this.swiperArr = res.data.data;
-				this.swiperImageArr=[];
+				this.swiperImageArr = [];
 				for (let i of this.swiperArr) {
 					this.swiperImageArr.push(i.image);
 				}
@@ -174,7 +171,7 @@ export default {
 			console.log('本店：', res);
 			if (res) {
 				this.list = res.data.data;
-				this.imageList=[];
+				this.imageList = [];
 				for (let i of this.list) {
 					this.imageList.push(i.image);
 				}
@@ -198,7 +195,7 @@ export default {
 			console.log('流行：', res);
 			if (res) {
 				this.list2 = res.data.data;
-				this.imageList2=[];
+				this.imageList2 = [];
 				for (let i of this.list2) {
 					this.imageList2.push(i.image);
 				}
@@ -210,8 +207,12 @@ export default {
 
 <style lang="scss" scoped>
 .uni-swiper-msg {
-	padding: 0 20rpx;
-	margin-top: 20px;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+	background: #f1f1f1;
+	margin-top: 0;
+	padding: 10px;
 }
 .swiper-image {
 	width: 100%;
@@ -234,5 +235,4 @@ export default {
 		}
 	}
 }
-
 </style>

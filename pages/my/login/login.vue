@@ -29,7 +29,10 @@
 <script>
 	export default {
 		onLoad(){
-			
+			const account = uni.getStorageSync('account');
+			if(account!==undefined){
+				this.account=account;
+			}
 		},
 		data() {
 			return {
@@ -61,7 +64,7 @@
 				console.log('登录:', res);
 				if(res){
 					uni.setStorageSync('userInfo', res.data.data);
-					
+					uni.setStorageSync('account', res.data.data.account);
 					this.$util.toast('登录成功');
 					
 					setTimeout(() => {
