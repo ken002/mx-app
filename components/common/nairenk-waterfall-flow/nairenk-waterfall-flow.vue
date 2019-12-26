@@ -10,9 +10,9 @@
 			@click="choose"
 		>
 			<view class="pic fall-item-container">
-				<image-cache v-if="item.showType===0" loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item.image"></image-cache>
+				<image-cache v-if="item.showType===0" :src="item.image"></image-cache>
 				<view class="jly-video-container" v-else>
-					<image-cache loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item.image"></image-cache>
+					<image-cache :src="item.image"></image-cache>
 					<video-play></video-play>
 				</view>
 			</view>

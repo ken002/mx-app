@@ -20,7 +20,13 @@ Vue.component('video-play',videoPlay);
 // 注册全局modal组件
 import chunLeiModal from '@/components/common/chunLei-modal/chunLei-modal.vue'
 Vue.component('chunLei-modal',chunLeiModal);
+
+//canvas压缩图片
+import cpimg from './components/common/cpimg/cpimg';
+Vue.component('cpimg',cpimg);
+
 const app = new Vue({
     ...App
 })
+
 app.$mount()

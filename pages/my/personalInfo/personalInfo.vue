@@ -3,8 +3,13 @@
 		<form>
 			<view @tap="uploadImage" class="cu-form-group margin-top">
 				<view class="title">头像</view>
-				<view class="cu-avatar radius bg-gray">
-					<image class="avatar" :src="userInfo.avatar"></image>
+				<view class="avatar">
+					<!-- #ifdef APP-PLUS -->
+					<image-cache ref="imageCache" :src="userInfo.avatar"></image-cache>
+					<!-- #endif -->
+					<!-- #ifndef APP-PLUS -->
+					<image :src="userInfo.avatar"></image>
+					<!-- #endif -->
 				</view>
 			</view>
 			<view class="cu-form-group margin-top">
@@ -12,6 +17,7 @@
 				<input v-model="userInfo.account" disabled></input>
 			</view>
 		</form>
+		<cpimg ref="cpimg" @result="cpimgOk"></cpimg>
 	</view>
 </template>
 
@@ -26,11 +32,24 @@
 			this.userInfo = uni.getStorageSync('userInfo');
 		},
 		methods: {
+			async cpimgOk(res){
+				console.log(res);
+				
+				const backPath = await this.$util.uploadImage(res[0]);
+				this.userInfo.avatar = backPath;
+				this.toModifyAvatar();
+			},
 			async uploadImage() {
+				// #ifdef APP-PLUS
 				const path = await this.$util.selectImage();
 				const backPath = await this.$util.uploadImage(path);
 				this.userInfo.avatar = backPath;
 				this.toModifyAvatar();
+				// #endif
+				
+				// #ifndef APP-PLUS
+					this.$refs.cpimg._changImg();
+				// #endif
 			},
 			async toModifyAvatar(){
 				const res = await this.$util.request({
@@ -52,6 +71,10 @@
 
 <style lang="scss" scoped>
 	.avatar{
-		width: 100%;height: 100%;
+		width: 32px;height: 32px;border-radius: 50%;
+		image{
+			width: 100%;height: 100%;
+		}
 	}
+	
 </style>

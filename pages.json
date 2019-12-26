@@ -59,12 +59,6 @@
 			}
         }
         ,{
-            "path" : "pages/my/manageSystem/manageSystem",
-            "style" : {
-				"navigationBarTitleText": "后台管理"
-			}
-        }
-        ,{
             "path" : "pages/my/moreResource/moreResource",
             "style" : {
 				"navigationBarTitleText": "更多美甲款式"

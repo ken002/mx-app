@@ -7,7 +7,7 @@
   "id": "__UNI__E150125",
   "name": "MX美甲",
   "version": {
-    "name": "1.0.6",
+    "name": "1.0.8",
     "code": "100"
   },
   "description": "",
@@ -112,6 +112,12 @@
       "apple": {},
       "plugins": {
         "oauth": {},
+        "maps": {
+          "baidu": {
+            "appkey_ios": "wu",
+            "appkey_android": "gKcGSyZGihCjKUXSlX7wnKTgYlR5fcqj"
+          }
+        },
         "audio": {
           "mp3": {
             "description": "Android平台录音支持MP3格式文件"

@@ -91,7 +91,6 @@
           flex: 1;
   text-align: left;
   font-size: 32rpx;
-  line-height: 100rpx;
   margin-left: 16rpx;
 }
 .dlbutton.data-v-5bf120a9 {

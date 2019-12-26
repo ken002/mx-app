@@ -1,0 +1,2 @@
+setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"image-container.",[1],"data-v-18f74d15 { text-align: center; }\n.",[1],"image-container wx-image.",[1],"data-v-18f74d15 { width: ",[0,750],"; height: ",[0,970],"; }\n.",[1],"padding.",[1],"data-v-18f74d15 { padding: 20px; }\n",],undefined,{path:"./pages/my/masterWeixin/masterWeixin.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/my/masterWeixin/masterWeixin.wxml') } }));

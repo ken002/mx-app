@@ -22,7 +22,7 @@
 			indicator-active-color="#39b54a"
 		>
 			<swiper-item @tap.stop="preview(index, 'swiper')" v-for="(item, index) in swiperArr" :key="index" :class="cardCur == index ? 'cur' : ''">
-				<view class="swiper-item"><image-cache loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item.image"></image-cache></view>
+				<view class="swiper-item"><image-cache :src="item.image"></image-cache></view>
 			</swiper-item>
 		</swiper>
 
@@ -37,9 +37,9 @@
 			<view class="sample-show">
 				<view style="background-color:#fff;" v-for="(item, index) in list" :key="index" class="item">
 					<view @tap="toDetail(item)" class="image-container">
-						<image-cache v-if="item.showType === 0" loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item.image"></image-cache>
+						<image-cache v-if="item.showType === 0" :src="item.image"></image-cache>
 						<view class="jly-video-container" v-else>
-							<image-cache loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item.image"></image-cache>
+							<image-cache :src="item.image"></image-cache>
 							<video-play></video-play>
 						</view>
 					</view>
@@ -60,9 +60,9 @@
 			<view class="sample-show">
 				<view style="background-color:#fff;" v-for="(item, index) in list2" :key="index" class="item">
 					<view @tap="toDetail(item)" class="image-container">
-						<image-cache v-if="item.showType === 0" loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item.image"></image-cache>
+						<image-cache v-if="item.showType === 0" :src="item.image"></image-cache>
 						<view class="jly-video-container" v-else>
-							<image-cache loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item.image"></image-cache>
+							<image-cache :src="item.image"></image-cache>
 							<video-play></video-play>
 						</view>
 					</view>

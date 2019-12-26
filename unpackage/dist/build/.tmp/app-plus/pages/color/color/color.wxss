@@ -24,10 +24,10 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.page.data-v-212255c6 {
+.page.data-v-09c9a959 {
   height: 100vh;
 }
-.cardTitle.data-v-212255c6 {
+.cardTitle.data-v-09c9a959 {
   color: #fff;
   padding: 20rpx 60rpx;
   font-size: 40rpx;
@@ -35,16 +35,16 @@
   position: relative;
   text-shadow: 0px 0px 6rpx rgba(0, 0, 0, 0.3);
 }
-.color-item.data-v-212255c6 {
+.color-item.data-v-09c9a959 {
   height: 200px;
   position: relative;
   overflow: hidden !important;
 }
-.color-item image.data-v-212255c6 {
+.color-item image.data-v-09c9a959 {
     width: 100%;
     height: 100%;
 }
-.color-item .cardTitle.data-v-212255c6 {
+.color-item .cardTitle.data-v-09c9a959 {
     position: absolute;
     width: 100%;
     z-index: 100;
@@ -52,7 +52,7 @@
     left: 0;
     background: rgba(0, 0, 0, 0.2);
 }
-.color-item .cardTitle .text.data-v-212255c6 {
+.color-item .cardTitle .text.data-v-09c9a959 {
       font-size: 40rpx;
       -webkit-transform: skew(-30deg, 0deg);
               transform: skew(-30deg, 0deg);

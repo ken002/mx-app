@@ -10,7 +10,6 @@
     "pages/my/myCollection/myCollection",
     "pages/index/productDetail/productDetail",
     "pages/my/about/about",
-    "pages/my/manageSystem/manageSystem",
     "pages/my/moreResource/moreResource",
     "pages/my/register/register",
     "pages/my/retrievePassword/retrievePassword",
@@ -54,6 +53,12 @@
       }
     ]
   },
+  "networkTimeout": {
+    "request": 6000,
+    "connectSocket": 6000,
+    "uploadFile": 15000,
+    "downloadFile": 15000
+  },
   "nvueCompiler": "uni-app",
   "renderer": "auto",
   "splashscreen": {
@@ -67,6 +72,7 @@
     "image-cache": "/components/common/image-cache/image-cache",
     "video-cache": "/components/current/video-cache/video-cache",
     "video-play": "/components/current/video-play/video-play",
-    "chun-lei-modal": "/components/common/chunLei-modal/chunLei-modal"
+    "chun-lei-modal": "/components/common/chunLei-modal/chunLei-modal",
+    "cpimg": "/components/common/cpimg/cpimg"
   }
 }

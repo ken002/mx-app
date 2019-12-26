@@ -2,7 +2,7 @@
 	<view>
 		<view class="cu-card">
 			<view class="cu-item bg-img shadow-blur color-item" @tap="preview(index)" v-for="(item, index) in list" :key="index">
-				<image-cache loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item.image"></image-cache>
+				<image-cache :src="item.image"></image-cache>
 				<view class="cardTitle">
 					<view class="text">￥{{ item.price }}</view>
 				</view>

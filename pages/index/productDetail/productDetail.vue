@@ -1,7 +1,7 @@
 <template>
 	<view>
-		<view class="image-container">
-			<image-cache @tap="toPreview" v-if="productDetail.showType===0" :src="productDetail.image" mode="aspectFill"></image-cache>
+		<view @tap="toPreview" class="image-container">
+			<image-cache v-if="productDetail.showType===0" :src="productDetail.image"></image-cache>
 			<video-cache v-else :src="productDetail.video"></video-cache>
 		</view>
 		<view class="padding">
@@ -61,10 +61,12 @@ export default {
 			}
 		},
 		toPreview(){
-			uni.previewImage({
-				current: this.productDetail.image,
-				urls: [this.productDetail.image]
-			});
+			if(this.productDetail.showType===0){
+				uni.previewImage({
+					current: 0,
+					urls: [this.productDetail.image]
+				});
+			}
 		},
 		async toCollect(){
 			if (this.userInfo === null || this.userInfo === '') {

@@ -1,1 +1,1 @@
-<view class="data-v-6ba8f9f1"><view class="text-xl version data-v-6ba8f9f1"><text class="text-bold data-v-6ba8f9f1">{{"当前版本："+currVersion}}</text></view></view>
+<view class="data-v-6ba8f9f1"><view class="text-xl version data-v-6ba8f9f1"><view style="text-align:left;margin-bottom:30px;" class="data-v-6ba8f9f1"><text class="text-bold data-v-6ba8f9f1">这是一款个人开发的美甲应用，旨在为杭州市西湖区三墩镇附近想做美甲的顾客提供最好的服务。<view class="_br data-v-6ba8f9f1"></view>应用不断优化完善中，如果有好的建议可以联系我们，电话：18070509562。</text></view><text class="text-bold data-v-6ba8f9f1">{{"当前版本："+currVersion}}</text></view></view>

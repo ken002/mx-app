@@ -1,1 +1,0 @@
-<image class="img" style="{{(imageStyle)}}" lazy-load="true" mode="aspectFill" src="{{resource}}"></image>

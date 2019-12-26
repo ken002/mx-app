@@ -1,5 +1,7 @@
 {
   "navigationBarTitleText": "我",
   "enablePullDownRefresh": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "image-cache": "/components/common/image-cache/image-cache"
+  }
 }

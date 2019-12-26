@@ -130,7 +130,6 @@
 		flex: 1;
 		text-align: left;
 		font-size: 32upx;
-		line-height: 100upx;
 		margin-left: 16upx;
 	}
 	.yzm {

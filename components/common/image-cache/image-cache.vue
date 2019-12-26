@@ -13,13 +13,20 @@ export default {
 		},
 		saveDirectory: {
 			type: String,
-			default: '_downloads/'
+			default: '_doc/uniapp_save/images/'
 		},
-		errorImage: String,
-		loadingImage: String
+		errorImage: {
+			type: String,
+			default: '/static/avatar.jpg'
+		},
+		loadingImage: {
+			type: String,
+			default: '/static/avatar.jpg'
+		}
 	},
 	computed: {
 		resource() {
+			this.init();
 			if (!this.isCached && this.error) {
 				// 加载失败
 				return this.errorImage;

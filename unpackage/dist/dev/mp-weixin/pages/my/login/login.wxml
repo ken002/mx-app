@@ -1,1 +1,0 @@
-<view class="data-v-5bf120a9"><view class="bottom data-v-5bf120a9"><view class="data-v-5bf120a9">--第三方登录--</view><view class="data-v-5bf120a9"><image src="../../../static/weixin.png" data-event-opts="{{[['tap',[['weixinLogin',['$event']]]]]}}" bindtap="__e" class="data-v-5bf120a9"></image></view></view></view>

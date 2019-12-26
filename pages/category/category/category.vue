@@ -17,9 +17,9 @@
 					<view class="cu-card case isCard">
 						<view v-for="(item2, index2) in item.arr" :key="index2" class="cu-item shadow right-card-item">
 							<view @tap="toDetail(item2)" class="image">
-								<image-cache v-if="item2.showType===0" loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item2.image"></image-cache>
+								<image-cache v-if="item2.showType===0" :src="item2.image"></image-cache>
 								<view class="jly-video-container" v-else>
-									<image-cache loadingImage="'/static/avatar.jpg'" errorImage="'/static/avatar.jpg'" :src="item2.image"></image-cache>
+									<image-cache :src="item2.image"></image-cache>
 									<video-play></video-play>
 								</view>
 								<view class="cu-bar bg-shadeBottom"> <text class="text-cut">{{item2.name}}</text></view>
