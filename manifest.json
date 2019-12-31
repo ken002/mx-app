@@ -2,7 +2,7 @@
     "name" : "MX美甲",
     "appid" : "__UNI__E150125",
     "description" : "",
-    "versionName" : "1.0.8",
+    "versionName" : "1.0.1",
     "versionCode" : "100",
     "transformPx" : false,
     "networkTimeout" : {
@@ -128,6 +128,11 @@
         "router" : {
             "base" : "/h5/"
         },
-        "domain" : "180.76.175.210"
+        "domain" : "180.76.175.210",
+        "optimization" : {
+            "treeShaking" : {
+                "enable" : true
+            }
+        }
     }
 }

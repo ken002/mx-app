@@ -10,14 +10,33 @@ export default {
 	onShow: function() {},
 	onHide: function() {},
 	methods: {
+		judgeUpgrade(newVersionArr, versionArr) {
+			//判断是否升级
+			if (Number(newVersionArr[0]) > Number(versionArr[0])) {
+				return true;
+			} else if (Number(newVersionArr[0]) === Number(versionArr[0])) {
+				if (Number(newVersionArr[1]) > Number(versionArr[1])) {
+					return true;
+				} else if (Number(newVersionArr[1]) === Number(versionArr[1])) {
+					if (Number(newVersionArr[2]) > Number(versionArr[2])) {
+						return true;
+					} else {
+						return false;
+					}
+				} else {
+					return false;
+				}
+			} else {
+				return false;
+			}
+		},
 		async checkVersion() {
 			var me = this;
 			const systemType = plus.os.name; //系统类型
 			var currVersion = plus.runtime.version; //当前版本
-			currVersion=currVersion.split('.').join('');
-			console.log(currVersion);
+			currVersion=currVersion.split('.');
 			var platform = 1;
-			if (systemType === 'ios') {
+			if (systemType === 'iOS') {
 				platform = 0;
 			}
 			const res = await this.$util.request({
@@ -32,8 +51,11 @@ export default {
 			if (res) {
 				if (res.data.data[0].length === 1) {
 					const newVersionObj = res.data.data[0][0];
-					
-					if (Number(currVersion) < newVersionObj.appVersion) {
+					var appVersion = newVersionObj.realAppVersion.split('.');
+					console.log(appVersion);
+					console.log(currVersion);
+					var confirmUp=this.judgeUpgrade(appVersion,currVersion);
+					if(confirmUp){
 						if (newVersionObj.allUpdate===1) {
 							uni.showModal({
 								title: '升级',
